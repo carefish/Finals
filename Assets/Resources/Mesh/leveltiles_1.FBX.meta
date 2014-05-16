@@ -1,0 +1,136 @@
+fileFormatVersion: 2
+guid: c50c26f7ce0c1af48ac19b0f0809eaf3
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: Box001
+    100002: Box002
+    100004: Circle004
+    100006: Circle006
+    100008: Circle007
+    100010: Circle009
+    100012: grote-bocht
+    100014: hoek
+    100016: hoge-muur
+    100018: hoge-muur001
+    100020: hoge-muur002
+    100022: hoge-muur003
+    100024: hoge-muur004
+    100026: kleine-bocht
+    100028: //RootNode
+    100030: rechtstuk
+    400000: Box001
+    400002: Box002
+    400004: Circle004
+    400006: Circle006
+    400008: Circle007
+    400010: Circle009
+    400012: grote-bocht
+    400014: hoek
+    400016: hoge-muur
+    400018: hoge-muur001
+    400020: hoge-muur002
+    400022: hoge-muur003
+    400024: hoge-muur004
+    400026: kleine-bocht
+    400028: //RootNode
+    400030: rechtstuk
+    2300000: Box001
+    2300002: Box002
+    2300004: Circle004
+    2300006: Circle006
+    2300008: Circle007
+    2300010: Circle009
+    2300012: grote-bocht
+    2300014: hoek
+    2300016: hoge-muur
+    2300018: hoge-muur001
+    2300020: hoge-muur002
+    2300022: hoge-muur003
+    2300024: hoge-muur004
+    2300026: kleine-bocht
+    2300028: rechtstuk
+    3300000: Box001
+    3300002: Box002
+    3300004: Circle004
+    3300006: Circle006
+    3300008: Circle007
+    3300010: Circle009
+    3300012: grote-bocht
+    3300014: hoek
+    3300016: hoge-muur
+    3300018: hoge-muur001
+    3300020: hoge-muur002
+    3300022: hoge-muur003
+    3300024: hoge-muur004
+    3300026: kleine-bocht
+    3300028: rechtstuk
+    4300000: hoge-muur
+    4300002: rechtstuk
+    4300004: kleine-bocht
+    4300006: hoek
+    4300008: grote-bocht
+    4300010: Box001
+    4300012: Box002
+    4300014: hoge-muur001
+    4300016: hoge-muur002
+    4300018: hoge-muur003
+    4300020: Circle004
+    4300022: Circle006
+    4300024: Circle007
+    4300026: hoge-muur004
+    4300028: Circle009
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
