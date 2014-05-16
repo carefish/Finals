@@ -2,14 +2,21 @@
 using System.Collections;
 
 public class PickupCoin : MonoBehaviour {
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.name.Contains("obj_Player"))
+        {
+            other.gameObject.GetComponent<ScoreCounter>().totalPoints += 10;
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+        }
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        if (other.name.Contains("obj_Player"))
+        {
+            Destroy(gameObject);
+
+        }
+    }
 }

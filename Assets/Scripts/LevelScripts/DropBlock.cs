@@ -26,7 +26,7 @@ public class DropBlock : MonoBehaviour
         //Debug.Log("stay " + easeDuration);
 
         float duration = (Time.time - startTime) / easeDuration;
-        Debug.Log(string.Format("easeDur: {0} dur: {1}", easeDuration, duration));
+        //Debug.Log(string.Format("easeDur: {0} dur: {1}", easeDuration, duration));
         transform.position = new Vector3(transform.position.x, transform.position.y, Mathf.SmoothStep(startZ, endZ, duration));
     }
 
