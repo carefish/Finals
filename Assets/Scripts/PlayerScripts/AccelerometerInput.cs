@@ -26,5 +26,6 @@ public class AccelerometerInput : MonoBehaviour
 #if UNITY_ANDROID
         rigidbody.velocity = new Vector3(Input.acceleration.x * speed, Input.acceleration.y * speed, 0);
 #endif
+        Debug.Log(rigidbody.velocity.ToString());
     }
 }
