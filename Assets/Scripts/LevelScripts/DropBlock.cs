@@ -20,22 +20,21 @@ public class DropBlock : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         startTime = Time.time;
+        BroadcastMessage("DropDown");
     }
-    void OnTriggerStay(Collider other)
-    {
-        //Debug.Log("stay " + easeDuration);
 
+    public void DropDown()
+    {
         float duration = (Time.time - startTime) / easeDuration;
-        //Debug.Log(string.Format("easeDur: {0} dur: {1}", easeDuration, duration));
         transform.position = new Vector3(transform.position.x, transform.position.y, Mathf.SmoothStep(startZ, endZ, duration));
     }
 
-    void OnTriggerExit(Collider other)
-    {
-        SetTransitionValues();
-    }
+    //void OnTriggerExit(Collider other)
+    //{
+    //    SetTransitionValues();
+    //}
 
-    void SetTransitionValues()
+    public void SetTransitionValues()
     {
         startZ = transform.position.z;
         endZ = startZ + 0.5f;

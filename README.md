@@ -1,4 +1,0 @@
-Finals
-======
-
-Final Exam
