@@ -50,6 +50,7 @@ ExportedObj/
 *.pidb
 *.suo
 *.sln
+*.sln.DotSettings
 *.user
 *.unityproj
 *.booproj
