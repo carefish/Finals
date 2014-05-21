@@ -51,6 +51,7 @@ ExportedObj/
 *.suo
 *.sln
 *.user
+UnityVS.*
 *.unityproj
 *.booproj
  

@@ -1,26 +1,34 @@
-﻿Shader "Example/Custom Vertex Data" {
-    Properties {
-      _MainTex ("Texture", 2D) = "white" {}
+﻿Shader "Transparent/VertexLit with Z" {
+Properties {
+    _Color ("Main Color", Color) = (1,1,1,1)
+    _SpecColor ("Spec Color", Color) = (1,1,1,0)
+    _Emission ("Emissive Color", Color) = (0,0,0,0)
+    _Shininess ("Shininess", Range (0.1, 1)) = 0.7
+    _MainTex ("Base (RGB) Trans (A)", 2D) = "white" {}
+}
+ 
+SubShader {
+    Tags {"RenderType"="Transparent" "Queue"="Transparent"}
+    // Render into depth buffer only
+        Pass {
+        ColorMask 0
     }
-    SubShader {
-      Tags { "RenderType" = "Opaque" }
-      CGPROGRAM
-      #pragma surface surf Lambert vertex:vert
-      struct Input {
-          float2 uv_MainTex;
-          float3 customColor;
-      };
-      void vert (inout appdata_full v, out Input o) {
-          UNITY_INITIALIZE_OUTPUT(Input,o);
-          //o.customColor = abs(v.normal);
-		  o.customColor = float3(0.16, 0.16, 0.16);
-      }
-      sampler2D _MainTex;
-      void surf (Input IN, inout SurfaceOutput o) {
-          o.Albedo = tex2D (_MainTex, IN.uv_MainTex).rgb;
-          o.Albedo *= IN.customColor;
-      }
-      ENDCG
-    } 
-    Fallback "Diffuse"
-  }
+    // Render normally
+    Pass {
+        ZWrite Off
+        Blend SrcAlpha OneMinusSrcAlpha
+        ColorMask RGB
+        Material {
+            Diffuse [_Color]
+            Ambient [_Color]
+            Shininess [_Shininess]
+            Specular [_SpecColor]
+            Emission [_Emission]
+        }
+        Lighting On
+        SetTexture [_MainTex] {
+            Combine texture * primary DOUBLE, texture * primary
+        }
+    }
+}
+}
