@@ -50,7 +50,6 @@ ExportedObj/
 *.pidb
 *.suo
 *.sln
-UnityVS.*
 *.user
 *.unityproj
 *.booproj

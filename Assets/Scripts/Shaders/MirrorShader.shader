@@ -29,7 +29,7 @@ Properties {
  
          fixed4 frag(void) : COLOR 
          {
-            return _Color; 
+            return tex2D(_MainTex, _Color).rgb; 
          }
  
          ENDCG  
@@ -56,7 +56,7 @@ Properties {
  
          fixed4 frag(void) : COLOR 
          {
-            return _Color;
+            return tex2D(_MainTex, _Color).rgb; 
          }
  
          ENDCG  

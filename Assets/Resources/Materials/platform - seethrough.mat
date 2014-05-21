@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: platform - seethrough
-  m_Shader: {fileID: 4800000, guid: 4f572e2d22309f54e8402a803d71fc3f, type: 3}
+  m_Shader: {fileID: 4800000, guid: c08f5d9eb8be8674abd2b8dfe8f82505, type: 3}
   m_ShaderKeywords: []
   m_CustomRenderQueue: -1
   m_SavedProperties:
@@ -36,7 +36,7 @@ Material:
       data:
         first:
           name: _Color
-        second: {r: .617647052, g: .617647052, b: .617647052, a: .149019614}
+        second: {r: .617647052, g: .617647052, b: .617647052, a: .270588249}
       data:
         first:
           name: _SecondColor

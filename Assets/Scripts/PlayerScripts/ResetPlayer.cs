@@ -16,7 +16,7 @@ public class ResetPlayer : MonoBehaviour
     /// <param name="other">The exiting player object</param>
     void OnTriggerExit(Collider other)
     {
-        if (other.name.Contains("obj_Player"))
+        if (other.tag == "Player")
         {
             other.transform.position = spawnPoint;
         }

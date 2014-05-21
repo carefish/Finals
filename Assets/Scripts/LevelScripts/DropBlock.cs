@@ -6,38 +6,22 @@ using System.Collections;
 /// </summary>
 public class DropBlock : MonoBehaviour
 {
-    public float easeDuration = 16.1803f;
-    float startZ;
-    float endZ;
-    float startTime;
-
-    void Start()
-    {
-        
-        SetTransitionValues();
-    }
-
     void OnTriggerEnter(Collider other)
     {
-        startTime = Time.time;
-        BroadcastMessage("DropDown");
+        gameObject.transform.parent.GetComponent<DropBorders>().SetDropValues(Time.time);
+        gameObject.transform.parent.GetComponent<DropBorders>().touching = true;
     }
 
-    public void DropDown()
+    void OnTriggerStay(Collider other)
     {
-        float duration = (Time.time - startTime) / easeDuration;
-        transform.position = new Vector3(transform.position.x, transform.position.y, Mathf.SmoothStep(startZ, endZ, duration));
+        gameObject.transform.parent.GetComponent<DropBorders>().DropBlocks();
+        gameObject.transform.parent.GetComponent<DropBorders>().touching = true;
     }
 
-    //void OnTriggerExit(Collider other)
-    //{
-    //    SetTransitionValues();
-    //}
-
-    public void SetTransitionValues()
+    void OnTriggerExit(Collider other)
     {
-        startZ = transform.position.z;
-        endZ = startZ + 0.5f;
+        gameObject.transform.parent.GetComponent<DropBorders>().SetDropValues(Time.time);
+        gameObject.transform.parent.GetComponent<DropBorders>().touching = false;
+        gameObject.transform.parent.GetComponent<DropBorders>().SetLiftValues(Time.time);
     }
-
 }

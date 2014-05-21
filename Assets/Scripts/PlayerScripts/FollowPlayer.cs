@@ -10,7 +10,11 @@ public class FollowPlayer : MonoBehaviour
     
     void Update()
     {
-        if (playerObject == null) return;
+        if (playerObject == null)
+        {
+            Debug.LogWarning("Player Object is null in: " + this.ToString());
+            return;
+        }
         transform.position = new Vector3(playerObject.transform.position.x, playerObject.transform.position.y, transform.position.z);
     }
 }

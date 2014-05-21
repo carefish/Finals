@@ -10,16 +10,21 @@ using System.Reflection;
 /// </summary>
 public class InstantiateGame : MonoBehaviour
 {
+    public GameObject gameConfigObject;
+    GameConfig gameConfig;
     GameObject player;
     GameObject level;
     GameObject playingFieldVolume;
     Transform playerSpawnPoint;
     string levelName = "";
-    GameConfig gameConfig;
 
     void Awake()
     {
-        gameConfig = GameObject.Find("GameConfig").GetComponent<GameConfig>();
+        if (gameConfigObject == null)
+        {
+            Debug.LogWarning("GameConfig GameObject reference not set! Check the Camera's InstantiateGame script inspector");
+        }
+        gameConfig = gameConfigObject.GetComponent<GameConfig>();
         levelName = gameConfig.levelName;
     }
 
