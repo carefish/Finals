@@ -18,5 +18,7 @@ to have a Game Object named 'SpawnPoint'.";
         GameConfig t    = (GameConfig)target;
         t.playerSpeed   = EditorGUILayout.Slider("Player speed: ", t.playerSpeed, 1.0f, 100.0f);
         t.levelName     = EditorGUILayout.TextField("Starting level: ", t.levelName); 
+		t.pickUpCoinValue = EditorGUILayout.IntField("Coin pickup Value:", 10);
+
     }
 }

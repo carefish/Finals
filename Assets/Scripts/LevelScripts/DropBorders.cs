@@ -22,12 +22,11 @@ public class DropBorders : MonoBehaviour
     void Update()
     {
         //TODO: fix max height
-        //Debug.Log(transform.position.z + " startpos: " + startPosition.z);
+        Debug.Log(transform.position.z + " startpos: " + startPosition.z);
         if (transform.position.z > startPosition.z && !touching && Time.time > liftTimer)
         {
             liftTimer = Time.time + liftDuration;
             LiftBlocks();
-            SetLiftValues(Time.time);
         }
     }
 
@@ -40,10 +39,6 @@ public class DropBorders : MonoBehaviour
 
     public void SetLiftValues(float time)
     {
-        if (transform.position.z > startPosition.z)
-        {
-            return;
-        }
         startTime = time;
         startZ = transform.position.z;
         endZ = startZ - 0.5f;

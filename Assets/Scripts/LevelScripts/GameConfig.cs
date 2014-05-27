@@ -7,6 +7,7 @@ using System.Collections;
 /// </summary>
 public class GameConfig : MonoBehaviour
 {
-    public string levelName = "Level01";
-    public float playerSpeed = 1.61803f;
+    public string levelName 	= "Level01";
+    public float playerSpeed 	= 1.61803f;
+	public int pickUpCoinValue 	= 10;
 }

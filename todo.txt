@@ -1,0 +1,47 @@
+Normaliseer signalerings plan naar enum:
+Signal.GREEN = startpositie + 0.5f;
+Signal.ORANGE = startpos + 1.f;
+Signal.RED = startpos + > 1.5f;
+eerst de enum goed zetten in de update.
+dan switchen erop in de update.
+
+refactor borderclasses naar partial 
+BordersUpdate.cs
+BordersTriggers.cs
+
+verander rigidbody.velocity naar AddForce (testen met verschillende forcemodes)
+
+
+//pushpin
+
+at the time of popup creation, measure the distance between
+the bottom of the dropdown and the bottom of the screen
+if you can't fit all of them, measure the distance between
+the top of the dropdown and the top of the screen
+if you still can't fit all of them, display a scrollbar
+
+//replace Do It button w/ item selected in listview
+//after entering a valid url, download contents and display listview.
+//page name settable by double tap or longpress
+<?xml version="1.0" encoding="utf-8" ?>
+<continuousbox id="theContinuousBox" style="padding:5" width="1920" height="1200" autoSize="false">
+	<vbox id="page">
+		<hbox>
+			<button text="previous" width="88" height="88" horizontalAlign="center" verticalAlign="center"></button>
+		    <vbox>
+			    <text text="The Page Name" height="44" id="pageName" horizontalAlign="center" verticalAlign="center"/>
+                      <spacer width="134" height="13" />
+                      <textinput text="127.0.0.1:8000" width="134" height="44" id="receivingIPaddress" horizontalAlign="center" verticalAlign="center"/>
+		    </vbox>
+			<button text="next" width="88" height="88" horizontalAlign="center" verticalAlign="center"></button>
+		</hbox>
+            <listview id="theList" width="320" height="240" />
+		<hbox>
+			<button text="previous" width="88" height="88" horizontalAlign="center" verticalAlign="center"></button>
+		    <vbox>
+                      <spacer width="134" height="13" />
+		    </vbox>
+			<button text="next" width="88" height="88"horizontalAlign="center" verticalAlign="center"></button>
+		</hbox>
+	</vbox>
+</continuousbox>

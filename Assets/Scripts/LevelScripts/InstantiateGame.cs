@@ -15,6 +15,11 @@ public class InstantiateGame : MonoBehaviour
     GameObject player;
     GameObject level;
     GameObject playingFieldVolume;
+	GameObject uiIngame;
+	GameObject button1;
+	GameObject button2;
+	GameObject button3;
+	GameObject button4;
     Transform playerSpawnPoint;
     string levelName = "";
 
@@ -32,6 +37,12 @@ public class InstantiateGame : MonoBehaviour
     {
         try
         {
+			//uiIngame = Instantiate(Resources.Load<GameObject>("UI")) as GameObject;
+			// check if instantiate is possible otherwise throw exception
+			if((uiIngame = Instantiate(Resources.Load<GameObject>("UI")) as GameObject) == null)	{
+				throw new System.Exception("Failed to initialize User Interface!");
+			}
+			assignButtons();
             if (Resources.Load<GameObject>("Levels/" + levelName) == null)
             {
                 throw new System.Exception("No valid level name! Please be sure to type a valid one!");
@@ -53,5 +64,18 @@ public class InstantiateGame : MonoBehaviour
         GetComponent<FollowPlayer>().playerObject = player;
         //playingFieldVolume = Instantiate(Resources.Load<GameObject>("LevelParts/obj_PlayingFieldVolume")) as GameObject;//DEPRECATED, leave here for now.
     }
+	/// <summary>
+	/// Assign buttons to pauseconditions Script
+	/// </summary>
+	private void assignButtons()	{
+
+		// CODING EXAMPLE, DIFFERENT WAY TO DO THIS:
+		//button1 = GameObject.Find("Button1");
+		//GetComponent<PauseConditions>().button1 = button1;
+		GetComponent<PauseConditions>().button1 = uiIngame.transform.FindChild("UI_p1").gameObject.transform.FindChild("Button1").gameObject;
+		GetComponent<PauseConditions>().button2 = uiIngame.transform.FindChild("UI_p1").gameObject.transform.FindChild("Button2").gameObject;
+		GetComponent<PauseConditions>().button3 = uiIngame.transform.FindChild("UI_p2").gameObject.transform.FindChild("Button3").gameObject;
+		GetComponent<PauseConditions>().button4 = uiIngame.transform.FindChild("UI_p2").gameObject.transform.FindChild("Button4").gameObject;
+	}
 
 }

@@ -30,10 +30,6 @@ Material:
     m_Floats:
       data:
         first:
-          name: _Cutoff
-        second: .232142866
-      data:
-        first:
           name: _Shininess
         second: .699999988
       data:
@@ -44,16 +40,16 @@ Material:
       data:
         first:
           name: _Color
-        second: {r: 1, g: 1, b: 1, a: 1}
+        second: {r: .617647052, g: .617647052, b: .617647052, a: .270588249}
       data:
         first:
           name: _SpecColor
         second: {r: 1, g: 1, b: 1, a: 0}
       data:
         first:
-          name: _Emission
-        second: {r: 0, g: 0, b: 0, a: 0}
-      data:
-        first:
           name: _SecondColor
         second: {r: .200000003, g: .200000003, b: .200000003, a: .159999996}
+      data:
+        first:
+          name: _Emission
+        second: {r: 0, g: 0, b: 0, a: 0}
