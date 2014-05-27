@@ -49,11 +49,12 @@ public class InstantiateGame : MonoBehaviour
             }
             level = Instantiate(Resources.Load<GameObject>("Levels/" + levelName)) as GameObject;
 
-            if (GameObject.Find("SpawnPoint") == null)
+            if (level.transform.FindChild("SpawnPoint") == null)
             {
                 throw new System.Exception("No SpawnPoint in level! Please be sure to add a Game Object named \'SpawnPoint\'!");
             }
             playerSpawnPoint = level.GetComponent<SpawnPoint>().spawnPoint;
+         
 
         }
         catch (System.Exception e)
@@ -62,6 +63,12 @@ public class InstantiateGame : MonoBehaviour
         }
         player = Instantiate(Resources.Load<GameObject>("player/obj_Player"), playerSpawnPoint.position, Quaternion.identity) as GameObject;
         GetComponent<FollowPlayer>().playerObject = player;
+        BlockTransparency[] blocks = level.GetComponentsInChildren<BlockTransparency>();//adding proximity-based transparency
+        foreach (BlockTransparency block in blocks)
+        {
+            block.player = player;
+        }
+
         //playingFieldVolume = Instantiate(Resources.Load<GameObject>("LevelParts/obj_PlayingFieldVolume")) as GameObject;//DEPRECATED, leave here for now.
     }
 	/// <summary>

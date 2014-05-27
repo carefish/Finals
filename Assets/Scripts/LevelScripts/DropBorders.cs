@@ -21,7 +21,6 @@ public class DropBorders : MonoBehaviour
 
     void Update()
     {
-        //TODO: fix max height
         Debug.Log(transform.position.z + " startpos: " + startPosition.z);
         if (transform.position.z > startPosition.z && !touching && Time.time > liftTimer)
         {

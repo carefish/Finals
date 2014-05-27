@@ -19840,8 +19840,6 @@ MonoBehaviour:
   easeDuration: 3
   liftDuration: 3
   touching: 0
-  startPosition: {x: 0, y: 0, z: 0}
-  endPosition: {x: 0, y: 0, z: 0}
 --- !u!114 &11400336
 MonoBehaviour:
   m_ObjectHideFlags: 1
