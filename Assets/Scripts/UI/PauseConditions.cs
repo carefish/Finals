@@ -37,7 +37,7 @@ public class PauseConditions : MonoBehaviour
 			}
 			
 		}
-		else if(Application.platform == RuntimePlatform.Android && Input.touchCount != 4)
+		else if(Input.touchCount != 4)
         {
 			showPauseText();
 
@@ -105,11 +105,11 @@ public class PauseConditions : MonoBehaviour
 			}
 			Debug.Log(pauseTxt1.transform.rotation.eulerAngles);
 		} catch (System.Exception ex) {
-			Debug.Log(ex);
-			pauseTxt1 = Instantiate(Resources.Load(loadThisResourceText)) as GameObject;
-			pauseTxt1.name = pauseTxt1.GetComponentInChildren<TextMesh>().text + 1;
-			pauseTxt2 = Instantiate(Resources.Load(loadThisResourceText)) as GameObject;
-			pauseTxt2.name = pauseTxt2.GetComponentInChildren<TextMesh>().text + 2;
+            Debug.LogException(ex, this);
+            //pauseTxt1 = Instantiate(Resources.Load(loadThisResourceText)) as GameObject;
+            //pauseTxt1.name = pauseTxt1.GetComponentInChildren<TextMesh>().text + 1;
+            //pauseTxt2 = Instantiate(Resources.Load(loadThisResourceText)) as GameObject;
+            //pauseTxt2.name = pauseTxt2.GetComponentInChildren<TextMesh>().text + 2;
 		}
 		
 		

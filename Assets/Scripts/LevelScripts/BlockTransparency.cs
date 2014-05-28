@@ -1,6 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+/// <summary>
+/// This component allows for transparent transition of a GameObject
+/// if some other collider is nearby. In this case the Player.
+/// </summary>
 public class BlockTransparency : MonoBehaviour
 {
     public GameObject player;

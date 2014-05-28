@@ -31,6 +31,7 @@ public class InstantiateGame : MonoBehaviour
         }
         gameConfig = gameConfigObject.GetComponent<GameConfig>();
         levelName = gameConfig.levelName;
+        Application.targetFrameRate = 30;
     }
 
     void Start()
@@ -61,7 +62,9 @@ public class InstantiateGame : MonoBehaviour
         {
             Debug.LogException(e, this);
         }
-        player = Instantiate(Resources.Load<GameObject>("player/obj_Player"), playerSpawnPoint.position, Quaternion.identity) as GameObject;
+        player = Instantiate(Resources.Load<GameObject>("Player/obj_Player"), playerSpawnPoint.position, Quaternion.identity) as GameObject;
+
+        Debug.Log(player.ToString());
         GetComponent<FollowPlayer>().playerObject = player;
         BlockTransparency[] blocks = level.GetComponentsInChildren<BlockTransparency>();//adding proximity-based transparency
         foreach (BlockTransparency block in blocks)

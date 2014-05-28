@@ -1,6 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+/// <summary>
+/// This component recycles objects by placing them 1000f units away
+/// on the Z-axis.
+/// </summary>
 public class BlockRecycler : MonoBehaviour
 {
     Vector3 startPosition;

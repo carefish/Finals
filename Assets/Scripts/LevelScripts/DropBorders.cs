@@ -1,39 +1,32 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+/// <summary>
+/// This component lowers or raises the borders as one object.
+/// This component is dependent on DropBlock's interaction with the player.
+/// </summary>
 public class DropBorders : MonoBehaviour
 {
-    public float easeDuration = 16.1803f;
     public float liftDuration = 1.61803f;
-    public bool touching = false;
-
-    float liftTimer = 0.5f;
+    float counter = 0f;
+    float startTime;
     float startZ;
     float endZ;
-    float startTime;
     Vector3 startPosition;
-
     void Start()
     {
-        liftTimer = liftDuration;
         startPosition = transform.position;
+        Debug.Log("start: " + startPosition.z);
     }
-
     void Update()
     {
-        Debug.Log(transform.position.z + " startpos: " + startPosition.z);
-        if (transform.position.z > startPosition.z && !touching && Time.time > liftTimer)
+        counter += Time.deltaTime;
+        if (counter > liftDuration && transform.position.z > startPosition.z)
         {
-            liftTimer = Time.time + liftDuration;
-            LiftBlocks();
+            Debug.Log("border: " + transform.position.z + " | " + counter);
+            transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z - 0.005f);
+            counter = 0f;
         }
-    }
-
-    public void SetDropValues(float time)
-    {
-        startTime = time;
-        startZ = transform.position.z;
-        endZ = startZ + 0.5f;
+        
     }
 
     public void SetLiftValues(float time)
@@ -41,13 +34,6 @@ public class DropBorders : MonoBehaviour
         startTime = time;
         startZ = transform.position.z;
         endZ = startZ - 0.5f;
-    }
-
-    public void DropBlocks()
-    {
-        float duration = (Time.time - startTime) / easeDuration;
-        float val = Mathf.SmoothStep(startZ, endZ, duration);
-        transform.position = new Vector3(transform.position.x, transform.position.y, val);
     }
 
     public void LiftBlocks()

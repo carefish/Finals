@@ -27,6 +27,7 @@ public class AccelerometerInput : MonoBehaviour
         speedtext = GameObject.Find("gravText");
         //END OF TMEP stuff
     }
+
     void OnGUI()
     {
         gameConfig.playerSpeed = GUI.VerticalSlider(new Rect(20.0f, 40.0f + h, w, h), gameConfig.playerSpeed, 0.5f, 16.18f);

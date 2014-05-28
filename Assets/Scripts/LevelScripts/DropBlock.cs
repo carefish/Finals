@@ -6,22 +6,13 @@ using System.Collections;
 /// </summary>
 public class DropBlock : MonoBehaviour
 {
-    void OnTriggerEnter(Collider other)
-    {
-        gameObject.transform.parent.GetComponent<DropBorders>().SetDropValues(Time.time);
-        gameObject.transform.parent.GetComponent<DropBorders>().touching = true;
-    }
+    Vector3 downwardsVector = new Vector3(0, 0, 0.005f);
 
     void OnTriggerStay(Collider other)
     {
-        gameObject.transform.parent.GetComponent<DropBorders>().DropBlocks();
-        gameObject.transform.parent.GetComponent<DropBorders>().touching = true;
-    }
-
-    void OnTriggerExit(Collider other)
-    {
-        gameObject.transform.parent.GetComponent<DropBorders>().SetDropValues(Time.time);
-        gameObject.transform.parent.GetComponent<DropBorders>().touching = false;
-        gameObject.transform.parent.GetComponent<DropBorders>().SetLiftValues(Time.time);
+        if (other.tag == "Player")
+        {
+            gameObject.transform.parent.position += downwardsVector;
+        }
     }
 }
