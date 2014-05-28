@@ -1,5 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
+public enum SignalPlan
+{
+    GREEN,
+    ORANGE,
+    RED,
+}
+
 /// <summary>
 /// This component lowers or raises the borders as one object.
 /// This component is dependent on DropBlock's interaction with the player.
@@ -7,6 +14,7 @@ using System.Collections;
 public class DropBorders : MonoBehaviour
 {
     public float liftDuration = 1.61803f;
+    public SignalPlan signalPlan;
     float counter = 0f;
     float startTime;
     float startZ;
@@ -26,7 +34,16 @@ public class DropBorders : MonoBehaviour
             transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z - 0.005f);
             counter = 0f;
         }
-        
+        if (transform.position.z <= startPosition.z)
+        {
+            signalPlan = SignalPlan.GREEN;
+        } else if (transform.position.z <= startPosition.z + .5f)
+        {
+            signalPlan = SignalPlan.ORANGE;
+        } else if (transform.position.z <= startPosition.z + 1f)
+        {
+            signalPlan = SignalPlan.RED;
+        }
     }
 
     public void SetLiftValues(float time)
