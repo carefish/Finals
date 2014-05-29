@@ -53,7 +53,6 @@ public class BlockTransparency : MonoBehaviour
         }
         else
         {
-            //Debug.Log("0");
             col.a += 0.1f;
             if (col.a >= 1.0f)
             {
@@ -61,5 +60,6 @@ public class BlockTransparency : MonoBehaviour
             }
             transform.parent.renderer.material.color = col;
         }
+
     }
 }

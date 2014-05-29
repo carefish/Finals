@@ -30,7 +30,7 @@ public class DropBorders : MonoBehaviour
         counter += Time.deltaTime;
         if (counter > liftDuration && transform.position.z > startPosition.z)
         {
-            Debug.Log("border: " + transform.position.z + " | " + counter);
+            //Debug.Log("border: " + transform.position.z + " | " + counter);
             transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z - 0.005f);
             counter = 0f;
         }

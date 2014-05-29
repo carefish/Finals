@@ -72,6 +72,13 @@ public class InstantiateGame : MonoBehaviour
             block.player = player;
         }
 
+        WaterTransparency[] waterPlane = level.GetComponentsInChildren<WaterTransparency>();//adding proximity-based transparency
+        foreach (WaterTransparency w in waterPlane)
+        {
+            w.player = player;
+        }
+
+
         //playingFieldVolume = Instantiate(Resources.Load<GameObject>("LevelParts/obj_PlayingFieldVolume")) as GameObject;//DEPRECATED, leave here for now.
     }
 	/// <summary>

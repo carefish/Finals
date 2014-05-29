@@ -7,17 +7,6 @@ using System.Collections;
 public class FollowPlayer : MonoBehaviour
 {
     public GameObject playerObject;
-    //SpringJoint springJoint;
-    void Start()
-    {
-        //gameObject.AddComponent<Rigidbody>();
-        //gameObject.rigidbody.useGravity = false;
-        //springJoint = gameObject.AddComponent<SpringJoint>();
-        //springJoint.connectedBody = playerObject.rigidbody;
-        //springJoint.connectedAnchor = playerObject.transform.position;
-        //springJoint.maxDistance = 1.6f;
-        //springJoint.minDistance = 1.0f;
-    }
     void Update()
     {
         if (playerObject == null)
@@ -25,8 +14,6 @@ public class FollowPlayer : MonoBehaviour
             Debug.LogWarning("Player Object is null in: " + this.ToString());
             return;
         }
-        transform.position = new Vector3(playerObject.transform.position.x, playerObject.transform.position.y, transform.position.z);
-
-        //springJoint.anchor = gameObject.transform.position;
+        transform.position = Vector3.Lerp(playerObject.transform.position - new Vector3(0, 0, 6.18f), transform.position, Mathf.Pow(0.98f, Time.deltaTime * Application.targetFrameRate * 16.1803f));
     }
 }
