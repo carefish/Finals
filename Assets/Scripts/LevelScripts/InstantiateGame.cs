@@ -64,7 +64,6 @@ public class InstantiateGame : MonoBehaviour
         }
         player = Instantiate(Resources.Load<GameObject>("Player/obj_Player"), playerSpawnPoint.position, Quaternion.identity) as GameObject;
 
-        Debug.Log(player.ToString());
         GetComponent<FollowPlayer>().playerObject = player;
         BlockTransparency[] blocks = level.GetComponentsInChildren<BlockTransparency>();//adding proximity-based transparency
         foreach (BlockTransparency block in blocks)

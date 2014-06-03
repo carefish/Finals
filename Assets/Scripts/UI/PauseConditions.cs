@@ -9,12 +9,13 @@ public class PauseConditions : MonoBehaviour
 	public GameObject button3;
 	public GameObject button4;
 
+	//Button state (pressed or not)
+	public string buttonState = "up";
 	// Pause Button
-	GameObject pauseTxt1;
-	GameObject pauseTxt2;
+	private GameObject pauseTxt1;
+	private GameObject pauseTxt2;
+	private GameObject pScreen;
 	float highScoreX;
-
-
 
     void Start()
     {
@@ -22,29 +23,53 @@ public class PauseConditions : MonoBehaviour
     }
     void Update()
     {
-
-        
-
+		// Changes color of buttons:
+		inputPos(button1);
+		inputPos(button2); 
+		inputPos(button3); 
+		inputPos(button4);
+		//----------------
+		pressLevelSelect(GameObject.Find("btn_lvlSelect"));
+			
 #if UNITY_ANDROID
 		// Pause game if less or more than 4 fingers (2 players)
 		if (inputPos(button1) && inputPos(button2) &&
            inputPos(button3) && inputPos(button4))
         {
-            Time.timeScale = 1.0f;
+			buttonState = "_down";
+			GameObject.Find("UI(Clone)").GetComponent<buttonColor>().changeColor(button1);
+			// Check if pause screen is not disabled else disable 
+			if(GameObject.Find("Pause_Screen") != null && GameObject.Find("Pause_Screen").activeSelf)
+			{
+				pScreen = GameObject.Find("Pause_Screen");
+				pScreen.SetActive(false);
+			}
+			Time.timeScale = 1.0f;
 			if(GameObject.Find(pauseTxt1.name))	{
 				Destroy(GameObject.Find(pauseTxt1.name));
 				Destroy(GameObject.Find(pauseTxt2.name));
 			}
-			
 		}
-		else if(Input.touchCount != 4)
+		// Check howmay fingers are on the display (4)
+		else if(Application.platform == RuntimePlatform.Android && Input.touchCount != 4)
         {
+			// Pause game
+			Time.timeScale = 0.0f;
+			// set pause screen to true and display pause text
+			pScreen.SetActive(true);
 			showPauseText();
-
-            Time.timeScale = 0.0f;
+			//GameObject.Find("Pause_Screen").SetActive(true);
+            
         }
 #endif
     }
+	private void pressLevelSelect(GameObject checkPos)	{
+		foreach (Touch t in Input.touches) {
+			if(checkPos.GetComponent<GUITexture>().HitTest(t.position))	{
+				Application.LoadLevel(0);
+			}
+		}
+	}
 	/// <summary>
 	/// Checks if Touch Input touches given Gameobject
 	/// </summary>
@@ -52,35 +77,44 @@ public class PauseConditions : MonoBehaviour
 	/// <param name="checkPos">Check position.</param>
     private bool inputPos(GameObject checkPos)
     {
-        foreach (Touch t in Input.touches)
+		foreach (Touch t in Input.touches)
         {
 			if(checkPos.GetComponent<GUITexture>().pixelInset.width < 0 || 
 			   checkPos.GetComponent<GUITexture>().pixelInset.height < 0)	{
-				//Debug.Log("this has been found true!");
 				if(t.position.x > checkPos.GetComponent<GUITexture>().pixelInset.x  + checkPos.GetComponent<GUITexture>().pixelInset.width &&
 				   t.position.x < checkPos.GetComponent<GUITexture>().pixelInset.x &&
 				   t.position.y > checkPos.GetComponent<GUITexture>().pixelInset.y + checkPos.GetComponent<GUITexture>().pixelInset.height && 
 				   t.position.y < checkPos.GetComponent<GUITexture>().pixelInset.y )	{
+					buttonState = "_down";
+					GameObject.Find("UI(Clone)").GetComponent<buttonColor>().gameState = "_orange";
+					GameObject.Find("UI(Clone)").GetComponent<buttonColor>().changeColor(checkPos);
 					return true;
+
 				}
 				
 			}
 			else {
 				if(checkPos.GetComponent<GUITexture>().HitTest(t.position))	{
-
+					buttonState = "_down";
+					GameObject.Find("UI(Clone)").GetComponent<buttonColor>().gameState = "_red";
+					GameObject.Find("UI(Clone)").GetComponent<buttonColor>().changeColor(checkPos);
 					return true;
 				}
 			}
         }
-        return false;
+		buttonState = "_down";
+		GameObject.Find("UI(Clone)").GetComponent<buttonColor>().gameState = "_green";
+		GameObject.Find("UI(Clone)").GetComponent<buttonColor>().changeColor(checkPos);
+		return false;
     }
 	/// <summary>
-	/// Displays Pause Text on screen
+	/// Displays Pause Text on screen when paused
 	/// </summary>
 	private void showPauseText()	{
 		string loadThisResourceText = "LevelParts/Text_test";
 		//GameObject pauseTxt1 = testpausetxt;
 		//GameObject pauseTxt2;
+
 		try {
 			highScoreX = (pauseTxt1.GetComponentInChildren<MeshRenderer>().renderer.bounds.size.x / 2);
 			pauseTxt1.GetComponent<Transform>().transform.localScale = new Vector3(0.01f, 0.1f, 0.01f);
@@ -101,17 +135,16 @@ public class PauseConditions : MonoBehaviour
 				Debug.Log("test");
 				pauseTxt2.transform.localRotation = Quaternion.Euler(new Vector3(pauseTxt2.transform.rotation.eulerAngles.x - .8f,
 				                                                                 pauseTxt2.transform.rotation.eulerAngles.y,
-				                                                                 pauseTxt2.transform.rotation.eulerAngles.z));
+				                                                                pauseTxt2.transform.rotation.eulerAngles.z));
 			}
 			Debug.Log(pauseTxt1.transform.rotation.eulerAngles);
 		} catch (System.Exception ex) {
-            Debug.LogException(ex, this);
-            //pauseTxt1 = Instantiate(Resources.Load(loadThisResourceText)) as GameObject;
-            //pauseTxt1.name = pauseTxt1.GetComponentInChildren<TextMesh>().text + 1;
-            //pauseTxt2 = Instantiate(Resources.Load(loadThisResourceText)) as GameObject;
-            //pauseTxt2.name = pauseTxt2.GetComponentInChildren<TextMesh>().text + 2;
+			Debug.Log(ex);
+			pauseTxt1 = Instantiate(Resources.Load(loadThisResourceText)) as GameObject;
+			pauseTxt1.name = pauseTxt1.GetComponentInChildren<TextMesh>().text + 1;
+			pauseTxt2 = Instantiate(Resources.Load(loadThisResourceText)) as GameObject;
+			pauseTxt2.name = pauseTxt2.GetComponentInChildren<TextMesh>().text + 2;
 		}
-		
 		
 	}
 }

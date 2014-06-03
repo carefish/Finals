@@ -15,6 +15,7 @@ public class PickupCoin : MonoBehaviour {
         if (other.tag == "Player")
         {
             Destroy(gameObject);
+			GameObject.Find("UI(Clone)").GetComponent<ScaleInGameGUI>().cCoins++;
         }
     }
 }

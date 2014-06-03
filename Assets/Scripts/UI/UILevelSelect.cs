@@ -64,7 +64,6 @@ public class UILevelSelect : MonoBehaviour
         {
             for (int j = 0; j < columnAmount; ++j)
             {
-                Vector2 setBasePos = new Vector2(50, 50);
 
                 pivotPoint = new Vector2(Screen.width / 2, Screen.height / 2);
                 GUIUtility.RotateAroundPivot(rotAngle, pivotPoint);
