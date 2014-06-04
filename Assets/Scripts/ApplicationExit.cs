@@ -8,9 +8,11 @@ public class ApplicationExit : MonoBehaviour
 {
     void Update()
     {
+		#if UNITY_EDITOR || UNITY_STANDALONE || UNITY_WEBPLAYER
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             Application.Quit();
         }
+		#endif
     }
 }

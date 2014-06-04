@@ -21,6 +21,7 @@ public class BlockTransparency : MonoBehaviour
             {
                 col.a = 0.0f;
             }
+            transform.parent.GetComponent<BoxCollider>().isTrigger = true;
             transform.parent.renderer.material.color = col;
         }
         else
@@ -30,6 +31,7 @@ public class BlockTransparency : MonoBehaviour
             {
                 col.a = 1.0f;
             }
+            transform.parent.GetComponent<BoxCollider>().isTrigger = false;
             transform.parent.renderer.material.color = col;
         }
 

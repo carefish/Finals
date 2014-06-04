@@ -64,7 +64,7 @@ public class ScaleInGameGUI : MonoBehaviour {
 	/// Get scale factor X based on base width (1280)
 	/// </summary>
 	/// <returns>The scale factor x.</returns>
-	float getScaleFactorX()
+	public float getScaleFactorX()
 	{
 		float scaleFactorX = (float)Screen.width / calcSizesWidth;
 		return scaleFactorX;
@@ -73,7 +73,7 @@ public class ScaleInGameGUI : MonoBehaviour {
 	/// Get Scale factor Y based on base height (720)
 	/// </summary>
 	/// <returns>The scale factor y.</returns>
-	float getScaleFactorY()
+	public float getScaleFactorY()
 	{
 		float scaleFactorY = (float)Screen.height / calcSizesHeight;
 		return scaleFactorY;
