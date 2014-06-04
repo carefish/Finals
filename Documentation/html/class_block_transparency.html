@@ -72,6 +72,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
       <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
       <li><a href="hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
+      <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
 </div><!-- top -->
@@ -94,7 +95,7 @@ $(document).ready(function(){initNavTree('class_block_transparency.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -128,13 +129,16 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a7c5f9720e40e90ec89cd73ef14ee6623"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7c5f9720e40e90ec89cd73ef14ee6623"></a>
 GameObject&#160;</td><td class="memItemRight" valign="bottom"><b>player</b></td></tr>
 <tr class="separator:a7c5f9720e40e90ec89cd73ef14ee6623"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3911a87b05cf6726d9b75c5d528ae958"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3911a87b05cf6726d9b75c5d528ae958"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>distanceTillFade</b> = 2.5f</td></tr>
+<tr class="separator:a3911a87b05cf6726d9b75c5d528ae958"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This component allows for transparent transition of a GameObject if some other collider is nearby. In this case the Player. </p>
 
 <p>Definition at line <a class="el" href="_block_transparency_8cs_source.html#l00007">7</a> of file <a class="el" href="_block_transparency_8cs_source.html">BlockTransparency.cs</a>.</p>
 </div><hr/>The documentation for this class was generated from the following file:<ul>
-<li>C:/Projects/Unity/Proeve van Bekwaamheid/Assets/Scripts/LevelScripts/<a class="el" href="_block_transparency_8cs_source.html">BlockTransparency.cs</a></li>
+<li>Assets/Scripts/LevelScripts/<a class="el" href="_block_transparency_8cs_source.html">BlockTransparency.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -142,7 +146,7 @@ GameObject&#160;</td><td class="memItemRight" valign="bottom"><b>player</b></td>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_block_transparency.html">BlockTransparency</a></li>
-    <li class="footer">Generated on Wed Jun 4 2014 20:39:55 for Proeve van Bekwaamheid by
+    <li class="footer">Generated on Wed Jun 4 2014 20:44:41 for Proeve van Bekwaamheid by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.7 </li>
   </ul>

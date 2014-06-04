@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['instantiategame',['InstantiateGame',['../class_instantiate_game.html',1,'']]]
+  ['highscoregui',['HighScoreGUI',['../class_high_score_g_u_i.html',1,'']]]
 ];

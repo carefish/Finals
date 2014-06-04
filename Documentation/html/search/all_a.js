@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['uilevelselect',['UILevelSelect',['../class_u_i_level_select.html',1,'']]]
+  ['pauseconditions',['PauseConditions',['../class_pause_conditions.html',1,'']]],
+  ['pickupcoin',['PickupCoin',['../class_pickup_coin.html',1,'']]]
 ];

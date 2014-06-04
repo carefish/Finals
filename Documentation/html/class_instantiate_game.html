@@ -72,6 +72,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
       <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
       <li><a href="hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
+      <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
 </div><!-- top -->
@@ -94,7 +95,7 @@ $(document).ready(function(){initNavTree('class_instantiate_game.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -116,7 +117,11 @@ $(document).ready(function(){initNavTree('class_instantiate_game.html','');});
   <table class="params">
     <tr><td class="paramname">player</td><td>The prefab/GameObject controlled by the player</td></tr>
     <tr><td class="paramname">level</td><td>The switchable level, switchable by setting 'levelName'</td></tr>
-    <tr><td class="paramname">playingFieldVolume</td><td>The box collider to aid in 'respawning' the player by setting the proper</td></tr>
+    <tr><td class="paramname">playingFieldVolume</td><td>The box collider to aid in 'respawning' the player by setting the proper position [DEPRECATED]</td></tr>
+    <tr><td class="paramname">gameConfig</td><td>Configuration for the game for inside Unity's Editor </td></tr>
+    <tr><td class="paramname">uiIngame</td><td>User Interface for the game</td></tr>
+    <tr><td class="paramname">playerSpawnPoint</td><td>The spawnpoint retreived from the game </td></tr>
+    <tr><td class="paramname">levelName</td><td>The level prefab to load per scene </td></tr>
   </table>
   </dd>
 </dl>
@@ -142,14 +147,18 @@ GameObject&#160;</td><td class="memItemRight" valign="bottom"><b>gameConfigObjec
   <table class="params">
     <tr><td class="paramname">player</td><td>The prefab/GameObject controlled by the player</td></tr>
     <tr><td class="paramname">level</td><td>The switchable level, switchable by setting 'levelName'</td></tr>
-    <tr><td class="paramname">playingFieldVolume</td><td>The box collider to aid in 'respawning' the player by setting the proper</td></tr>
+    <tr><td class="paramname">playingFieldVolume</td><td>The box collider to aid in 'respawning' the player by setting the proper position [DEPRECATED]</td></tr>
+    <tr><td class="paramname">gameConfig</td><td>Configuration for the game for inside Unity's Editor </td></tr>
+    <tr><td class="paramname">uiIngame</td><td>User Interface for the game</td></tr>
+    <tr><td class="paramname">playerSpawnPoint</td><td>The spawnpoint retreived from the game </td></tr>
+    <tr><td class="paramname">levelName</td><td>The level prefab to load per scene </td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_instantiate_game_8cs_source.html#l00011">11</a> of file <a class="el" href="_instantiate_game_8cs_source.html">InstantiateGame.cs</a>.</p>
+<p>Definition at line <a class="el" href="_instantiate_game_8cs_source.html#l00015">15</a> of file <a class="el" href="_instantiate_game_8cs_source.html">InstantiateGame.cs</a>.</p>
 </div><hr/>The documentation for this class was generated from the following file:<ul>
-<li>C:/Projects/Unity/Proeve van Bekwaamheid/Assets/Scripts/LevelScripts/<a class="el" href="_instantiate_game_8cs_source.html">InstantiateGame.cs</a></li>
+<li>Assets/Scripts/LevelScripts/<a class="el" href="_instantiate_game_8cs_source.html">InstantiateGame.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -157,7 +166,7 @@ GameObject&#160;</td><td class="memItemRight" valign="bottom"><b>gameConfigObjec
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_instantiate_game.html">InstantiateGame</a></li>
-    <li class="footer">Generated on Wed Jun 4 2014 20:39:55 for Proeve van Bekwaamheid by
+    <li class="footer">Generated on Wed Jun 4 2014 20:44:41 for Proeve van Bekwaamheid by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.7 </li>
   </ul>

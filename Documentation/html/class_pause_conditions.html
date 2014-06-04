@@ -72,6 +72,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
       <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
       <li><a href="hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
+      <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
 </div><!-- top -->
@@ -94,7 +95,7 @@ $(document).ready(function(){initNavTree('class_pause_conditions.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -111,6 +112,9 @@ $(document).ready(function(){initNavTree('class_pause_conditions.html','');});
 <div class="title">PauseConditions Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>This component allows the game to pause if the players are not playing the game properly or if they want to take a break. Or if the supervising mentor wants to intervene.  
+ <a href="class_pause_conditions.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for PauseConditions:</div>
 <div class="dyncontent">
@@ -134,12 +138,16 @@ GameObject&#160;</td><td class="memItemRight" valign="bottom"><b>button3</b></td
 <tr class="memitem:a0a07c7c652aedc49d722d046bec5ae4c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0a07c7c652aedc49d722d046bec5ae4c"></a>
 GameObject&#160;</td><td class="memItemRight" valign="bottom"><b>button4</b></td></tr>
 <tr class="separator:a0a07c7c652aedc49d722d046bec5ae4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4c6398400a160dc567f2aa5c146631a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa4c6398400a160dc567f2aa5c146631a"></a>
+string&#160;</td><td class="memItemRight" valign="bottom"><b>buttonState</b> = &quot;up&quot;</td></tr>
+<tr class="separator:aa4c6398400a160dc567f2aa5c146631a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p>Definition at line <a class="el" href="_pause_conditions_8cs_source.html#l00004">4</a> of file <a class="el" href="_pause_conditions_8cs_source.html">PauseConditions.cs</a>.</p>
+<div class="textblock"><p>This component allows the game to pause if the players are not playing the game properly or if they want to take a break. Or if the supervising mentor wants to intervene. </p>
+
+<p>Definition at line <a class="el" href="_pause_conditions_8cs_source.html#l00007">7</a> of file <a class="el" href="_pause_conditions_8cs_source.html">PauseConditions.cs</a>.</p>
 </div><hr/>The documentation for this class was generated from the following file:<ul>
-<li>C:/Projects/Unity/Proeve van Bekwaamheid/Assets/Scripts/UI/<a class="el" href="_pause_conditions_8cs_source.html">PauseConditions.cs</a></li>
+<li>Assets/Scripts/UI/<a class="el" href="_pause_conditions_8cs_source.html">PauseConditions.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -147,7 +155,7 @@ GameObject&#160;</td><td class="memItemRight" valign="bottom"><b>button4</b></td
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_pause_conditions.html">PauseConditions</a></li>
-    <li class="footer">Generated on Wed Jun 4 2014 20:39:55 for Proeve van Bekwaamheid by
+    <li class="footer">Generated on Wed Jun 4 2014 20:44:41 for Proeve van Bekwaamheid by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.7 </li>
   </ul>

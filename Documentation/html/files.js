@@ -1,4 +1,4 @@
 var files =
 [
-    [ "Proeve van Bekwaamheid", "dir_45413223b5202d8a5674432d436a17c2.html", "dir_45413223b5202d8a5674432d436a17c2" ]
+    [ "Assets", "dir_84bbf7b3c7f28a5a18725745e1505219.html", "dir_84bbf7b3c7f28a5a18725745e1505219" ]
 ];

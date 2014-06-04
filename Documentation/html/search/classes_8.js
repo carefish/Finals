@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['resetplayer',['ResetPlayer',['../class_reset_player.html',1,'']]],
-  ['rotategui',['RotateGUI',['../class_rotate_g_u_i.html',1,'']]]
+  ['pauseconditions',['PauseConditions',['../class_pause_conditions.html',1,'']]],
+  ['pickupcoin',['PickupCoin',['../class_pickup_coin.html',1,'']]]
 ];

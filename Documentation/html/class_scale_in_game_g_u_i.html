@@ -72,6 +72,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
       <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
       <li><a href="hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
+      <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
 </div><!-- top -->
@@ -94,7 +95,7 @@ $(document).ready(function(){initNavTree('class_scale_in_game_g_u_i.html','');})
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -105,12 +106,16 @@ $(document).ready(function(){initNavTree('class_scale_in_game_g_u_i.html','');})
 
 <div class="header">
   <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="class_scale_in_game_g_u_i-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">ScaleInGameGUI Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Helper class, to scale the art assets based on screensize. For use with GetComponent&lt;&gt;();  
+ <a href="class_scale_in_game_g_u_i.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for ScaleInGameGUI:</div>
 <div class="dyncontent">
@@ -120,6 +125,15 @@ Inheritance diagram for ScaleInGameGUI:</div>
 </map>
  </div></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:ae3942b3cc59a81c4a313d9a95fc51ca8"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scale_in_game_g_u_i.html#ae3942b3cc59a81c4a313d9a95fc51ca8">getScaleFactorX</a> ()</td></tr>
+<tr class="memdesc:ae3942b3cc59a81c4a313d9a95fc51ca8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get scale factor X based on base width (1280)  <a href="#ae3942b3cc59a81c4a313d9a95fc51ca8">More...</a><br /></td></tr>
+<tr class="separator:ae3942b3cc59a81c4a313d9a95fc51ca8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92ffdb5483a4584e153c7a3790a48f00"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scale_in_game_g_u_i.html#a92ffdb5483a4584e153c7a3790a48f00">getScaleFactorY</a> ()</td></tr>
+<tr class="memdesc:a92ffdb5483a4584e153c7a3790a48f00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get Scale factor Y based on base height (720)  <a href="#a92ffdb5483a4584e153c7a3790a48f00">More...</a><br /></td></tr>
+<tr class="separator:a92ffdb5483a4584e153c7a3790a48f00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:ad1e5aa3fc09488374a71b38602f16f93"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad1e5aa3fc09488374a71b38602f16f93"></a>
@@ -128,12 +142,63 @@ const int&#160;</td><td class="memItemRight" valign="bottom"><b>calcSizesWidth</
 <tr class="memitem:a63c80e42c3125a8b865b812c9e1f5d70"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a63c80e42c3125a8b865b812c9e1f5d70"></a>
 const int&#160;</td><td class="memItemRight" valign="bottom"><b>calcSizesHeight</b> = 1280</td></tr>
 <tr class="separator:a63c80e42c3125a8b865b812c9e1f5d70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0650acf19582c4ca460f7a993aa60fa"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af0650acf19582c4ca460f7a993aa60fa"></a>
+GameObject&#160;</td><td class="memItemRight" valign="bottom"><b>barTest</b></td></tr>
+<tr class="separator:af0650acf19582c4ca460f7a993aa60fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0169d2d0731defc3e20c2fd4e9882969"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0169d2d0731defc3e20c2fd4e9882969"></a>
+GameObject&#160;</td><td class="memItemRight" valign="bottom"><b>barTest2</b></td></tr>
+<tr class="separator:a0169d2d0731defc3e20c2fd4e9882969"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5847a5c3448b443c0d3891752ecf5954"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5847a5c3448b443c0d3891752ecf5954"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>cCoins</b></td></tr>
+<tr class="separator:a5847a5c3448b443c0d3891752ecf5954"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p>Definition at line <a class="el" href="_scale_in_game_g_u_i_8cs_source.html#l00004">4</a> of file <a class="el" href="_scale_in_game_g_u_i_8cs_source.html">ScaleInGameGUI.cs</a>.</p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
-<li>C:/Projects/Unity/Proeve van Bekwaamheid/Assets/Scripts/UI/<a class="el" href="_scale_in_game_g_u_i_8cs_source.html">ScaleInGameGUI.cs</a></li>
+<div class="textblock"><p>Helper class, to scale the art assets based on screensize. For use with GetComponent&lt;&gt;(); </p>
+
+<p>Definition at line <a class="el" href="_scale_in_game_g_u_i_8cs_source.html#l00007">7</a> of file <a class="el" href="_scale_in_game_g_u_i_8cs_source.html">ScaleInGameGUI.cs</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="ae3942b3cc59a81c4a313d9a95fc51ca8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float ScaleInGameGUI.getScaleFactorX </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get scale factor X based on base width (1280) </p>
+<dl class="section return"><dt>Returns</dt><dd>The scale factor x.</dd></dl>
+
+<p>Definition at line <a class="el" href="_scale_in_game_g_u_i_8cs_source.html#l00059">59</a> of file <a class="el" href="_scale_in_game_g_u_i_8cs_source.html">ScaleInGameGUI.cs</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a92ffdb5483a4584e153c7a3790a48f00"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float ScaleInGameGUI.getScaleFactorY </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get Scale factor Y based on base height (720) </p>
+<dl class="section return"><dt>Returns</dt><dd>The scale factor y.</dd></dl>
+
+<p>Definition at line <a class="el" href="_scale_in_game_g_u_i_8cs_source.html#l00068">68</a> of file <a class="el" href="_scale_in_game_g_u_i_8cs_source.html">ScaleInGameGUI.cs</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>Assets/Scripts/UIScripts/<a class="el" href="_scale_in_game_g_u_i_8cs_source.html">ScaleInGameGUI.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -141,7 +206,7 @@ const int&#160;</td><td class="memItemRight" valign="bottom"><b>calcSizesHeight<
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_scale_in_game_g_u_i.html">ScaleInGameGUI</a></li>
-    <li class="footer">Generated on Wed Jun 4 2014 20:39:55 for Proeve van Bekwaamheid by
+    <li class="footer">Generated on Wed Jun 4 2014 20:44:41 for Proeve van Bekwaamheid by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.7 </li>
   </ul>

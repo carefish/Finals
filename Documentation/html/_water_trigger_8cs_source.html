@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.7"/>
-<title>Proeve van Bekwaamheid: C:/Projects/Unity/Proeve van Bekwaamheid/Assets/Scripts/LevelScripts/WaterTrigger.cs Source File</title>
+<title>Proeve van Bekwaamheid: Assets/Scripts/LevelScripts/WaterTrigger.cs Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,7 +92,7 @@ $(document).ready(function(){initNavTree('_water_trigger_8cs_source.html','');})
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -108,45 +108,43 @@ $(document).ready(function(){initNavTree('_water_trigger_8cs_source.html','');})
 <div class="contents">
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> UnityEngine;</div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> System.Collections;</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
-<div class="line"><a name="l00004"></a><span class="lineno"><a class="line" href="class_water_trigger.html">    4</a></span>&#160;<span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_water_trigger.html">WaterTrigger</a> : MonoBehaviour {</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    <a class="code" href="class_water_transparency.html">WaterTransparency</a> t;</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    <span class="comment">// Use this for initialization</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <span class="keywordtype">void</span> Start () {</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;        t = transform.parent.GetComponent&lt;<a class="code" href="class_water_transparency.html">WaterTransparency</a>&gt;();</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    }</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keywordtype">void</span> OnTriggerEnter(Collider other)</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    {</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        <span class="keywordflow">if</span> (other.tag == <span class="stringliteral">&quot;Player&quot;</span>)</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        {</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;            t.change = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        }</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    }</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordtype">void</span> OnTriggerStay(Collider other)</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    {</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="keywordflow">if</span> (other.tag == <span class="stringliteral">&quot;Player&quot;</span>)</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        {</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;            t.change = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        }</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    }</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">void</span> OnTriggerExit(Collider other)</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    {</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keywordflow">if</span> (other.tag == <span class="stringliteral">&quot;Player&quot;</span>)</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        {</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            t.change = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        }</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    }</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;}</div>
-<div class="ttc" id="class_water_trigger_html"><div class="ttname"><a href="class_water_trigger.html">WaterTrigger</a></div><div class="ttdef"><b>Definition:</b> <a href="_water_trigger_8cs_source.html#l00004">WaterTrigger.cs:4</a></div></div>
+<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="class_water_trigger.html">    6</a></span>&#160;<span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_water_trigger.html">WaterTrigger</a> : MonoBehaviour {</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <a class="code" href="class_water_transparency.html">WaterTransparency</a> t;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="keywordtype">void</span> Start () {</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        t = transform.parent.GetComponent&lt;<a class="code" href="class_water_transparency.html">WaterTransparency</a>&gt;();</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    }</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keywordtype">void</span> OnTriggerEnter(Collider other)</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    {</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        <span class="keywordflow">if</span> (other.tag == <span class="stringliteral">&quot;Player&quot;</span>)</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;            t.change = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        }</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    }</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">void</span> OnTriggerStay(Collider other)</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    {</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keywordflow">if</span> (other.tag == <span class="stringliteral">&quot;Player&quot;</span>)</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        {</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            t.change = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        }</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    }</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">void</span> OnTriggerExit(Collider other)</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keywordflow">if</span> (other.tag == <span class="stringliteral">&quot;Player&quot;</span>)</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        {</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            t.change = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        }</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    }</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;}</div>
+<div class="ttc" id="class_water_trigger_html"><div class="ttname"><a href="class_water_trigger.html">WaterTrigger</a></div><div class="ttdoc">This component manages the transparency of the water mesh in the game. </div><div class="ttdef"><b>Definition:</b> <a href="_water_trigger_8cs_source.html#l00006">WaterTrigger.cs:6</a></div></div>
 <div class="ttc" id="class_water_transparency_html"><div class="ttname"><a href="class_water_transparency.html">WaterTransparency</a></div><div class="ttdoc">This component allows for transparent transition of a GameObject if some other collider is nearby...</div><div class="ttdef"><b>Definition:</b> <a href="_water_transparency_8cs_source.html#l00007">WaterTransparency.cs:7</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_45413223b5202d8a5674432d436a17c2.html">Proeve van Bekwaamheid</a></li><li class="navelem"><a class="el" href="dir_997fa4a127c89745a8c31e1e964d8ca4.html">Assets</a></li><li class="navelem"><a class="el" href="dir_61b2c5d6bfbe6cd924268171f759affc.html">Scripts</a></li><li class="navelem"><a class="el" href="dir_4394e67b9654f85d2b45a422988c209c.html">LevelScripts</a></li><li class="navelem"><b>WaterTrigger.cs</b></li>
-    <li class="footer">Generated on Wed Jun 4 2014 20:39:55 for Proeve van Bekwaamheid by
+    <li class="navelem"><a class="el" href="dir_84bbf7b3c7f28a5a18725745e1505219.html">Assets</a></li><li class="navelem"><a class="el" href="dir_f13b41af88cf68434578284aaf699e39.html">Scripts</a></li><li class="navelem"><a class="el" href="dir_3a551bb13842f40ed4338794d3630428.html">LevelScripts</a></li><li class="navelem"><b>WaterTrigger.cs</b></li>
+    <li class="footer">Generated on Wed Jun 4 2014 20:44:41 for Proeve van Bekwaamheid by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.7 </li>
   </ul>

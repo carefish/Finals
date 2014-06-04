@@ -5,29 +5,46 @@ Here are the classes, structs, unions and interfaces with brief descriptions\+:\
 \item\contentsline{section}{\hyperlink{class_application_exit}{Application\+Exit} \\*This component allows the application to exit on any platform. }{\pageref{class_application_exit}}{}
 \item\contentsline{section}{\hyperlink{class_block_recycler}{Block\+Recycler} \\*This component recycles objects by placing them 1000f units away on the Z-\/axis. }{\pageref{class_block_recycler}}{}
 \item\contentsline{section}{\hyperlink{class_block_transparency}{Block\+Transparency} \\*This component allows for transparent transition of a Game\+Object if some other collider is nearby. In this case the Player. }{\pageref{class_block_transparency}}{}
+\item\contentsline{section}{\hyperlink{classbutton_color}{button\+Color} \\*This component allows the buttons to change color based on the height of the borders. It }{\pageref{classbutton_color}}{}
 \item\contentsline{section}{\hyperlink{class_drop_block}{Drop\+Block} \\*Component used to ease a levelpart downwards. Controlled in the editor by Drop\+Block\+Helper }{\pageref{class_drop_block}}{}
 \item\contentsline{section}{\hyperlink{class_drop_borders}{Drop\+Borders} \\*This component lowers or raises the borders as one object. This component is dependent on \hyperlink{class_drop_block}{Drop\+Block}'s interaction with the player. }{\pageref{class_drop_borders}}{}
+\item\contentsline{section}{\hyperlink{class_drop_borders_helper}{Drop\+Borders\+Helper} }{\pageref{class_drop_borders_helper}}{}
+\item\contentsline{section}{\hyperlink{class_finish_trigger}{Finish\+Trigger} }{\pageref{class_finish_trigger}}{}
 \item\contentsline{section}{\hyperlink{class_follow_player}{Follow\+Player} \\*This component ensures the Camera follows the player. The player\+Object is checked for an active instane as well. }{\pageref{class_follow_player}}{}
-\item\contentsline{section}{\hyperlink{class_game_config}{Game\+Config} \\*Configuration for the game. For use with Get\+Component$<$$>$(); Controlled in the editor by Game\+Config\+Helper }{\pageref{class_game_config}}{}
-\item\contentsline{section}{\hyperlink{class_high_score_g_u_i}{High\+Score\+G\+U\+I} }{\pageref{class_high_score_g_u_i}}{}
+\item\contentsline{section}{\hyperlink{class_game_config}{Game\+Config} \\*Configuration for the game. For use with Get\+Component$<$$>$(); Controlled in the editor by \hyperlink{class_game_config_helper}{Game\+Config\+Helper} }{\pageref{class_game_config}}{}
+\item\contentsline{section}{\hyperlink{class_game_config_helper}{Game\+Config\+Helper} }{\pageref{class_game_config_helper}}{}
+\item\contentsline{section}{\hyperlink{classgo_to_menu}{go\+To\+Menu} \\*Helper class to quickly go back to the main screen. }{\pageref{classgo_to_menu}}{}
+\item\contentsline{section}{\hyperlink{class_high_score_g_u_i}{High\+Score\+G\+U\+I} \\*This component manages the score to be displayed properly in the game. It retrieves a player\+Object via Get\+Component$<$$>$(); It also updates the \hyperlink{class_score_counter}{Score\+Counter} with the new score. }{\pageref{class_high_score_g_u_i}}{}
 \item\contentsline{section}{\hyperlink{class_instantiate_game}{Instantiate\+Game} \\*This component is responsible for loading and instantiating objects needed for the game. 
 \begin{DoxyParams}{Parameters}
 {\em player} & The prefab/\+Game\+Object controlled by the player\\
 \hline
 {\em level} & The switchable level, switchable by setting 'level\+Name'\\
 \hline
-{\em playing\+Field\+Volume} & The box collider to aid in 'respawning' the player by setting the proper\\
+{\em playing\+Field\+Volume} & The box collider to aid in 'respawning' the player by setting the proper position \mbox{[}D\+E\+P\+R\+E\+C\+A\+T\+E\+D\mbox{]}\\
+\hline
+{\em game\+Config} & Configuration for the game for inside Unity's Editor \\
+\hline
+{\em ui\+Ingame} & User Interface for the game\\
+\hline
+{\em player\+Spawn\+Point} & The spawnpoint retreived from the game \\
+\hline
+{\em level\+Name} & The level prefab to load per scene \\
 \hline
 \end{DoxyParams}
 }{\pageref{class_instantiate_game}}{}
-\item\contentsline{section}{\hyperlink{class_pause_conditions}{Pause\+Conditions} }{\pageref{class_pause_conditions}}{}
-\item\contentsline{section}{\hyperlink{class_pickup_coin}{Pickup\+Coin} }{\pageref{class_pickup_coin}}{}
+\item\contentsline{section}{\hyperlink{class_menu_script}{Menu\+Script} \\*This component is responsible for the menu's in the game. This component is also the entry point for many of the User Interface elements }{\pageref{class_menu_script}}{}
+\item\contentsline{section}{\hyperlink{class_pause_conditions}{Pause\+Conditions} \\*This component allows the game to pause if the players are not playing the game properly or if they want to take a break. Or if the supervising mentor wants to intervene. }{\pageref{class_pause_conditions}}{}
+\item\contentsline{section}{\hyperlink{class_pickup_coin}{Pickup\+Coin} \\*This component is the pickup/powerup in the game. It uses the \hyperlink{class_score_counter}{Score\+Counter} as data store. }{\pageref{class_pickup_coin}}{}
 \item\contentsline{section}{\hyperlink{class_reset_player}{Reset\+Player} \\*This component ensures the level resets the player. }{\pageref{class_reset_player}}{}
-\item\contentsline{section}{\hyperlink{class_rotate_g_u_i}{Rotate\+G\+U\+I} }{\pageref{class_rotate_g_u_i}}{}
-\item\contentsline{section}{\hyperlink{class_scale_in_game_g_u_i}{Scale\+In\+Game\+G\+U\+I} }{\pageref{class_scale_in_game_g_u_i}}{}
-\item\contentsline{section}{\hyperlink{class_score_counter}{Score\+Counter} }{\pageref{class_score_counter}}{}
+\item\contentsline{section}{\hyperlink{class_rotate_g_u_i}{Rotate\+G\+U\+I} \\*This is a helper class to help with rotating the User Interface elements. }{\pageref{class_rotate_g_u_i}}{}
+\item\contentsline{section}{\hyperlink{class_scale_in_game_g_u_i}{Scale\+In\+Game\+G\+U\+I} \\*Helper class, to scale the art assets based on screensize. For use with Get\+Component$<$$>$(); }{\pageref{class_scale_in_game_g_u_i}}{}
+\item\contentsline{section}{\hyperlink{class_score_counter}{Score\+Counter} \\*Helper class, to store the total scored points. For use with Get\+Component$<$$>$(); }{\pageref{class_score_counter}}{}
 \item\contentsline{section}{\hyperlink{class_spawn_point}{Spawn\+Point} \\*Helper class, to store the \hyperlink{class_spawn_point}{Spawn\+Point}. For use with Get\+Component$<$$>$(); }{\pageref{class_spawn_point}}{}
-\item\contentsline{section}{\hyperlink{class_u_i_level_select}{U\+I\+Level\+Select} }{\pageref{class_u_i_level_select}}{}
+\item\contentsline{section}{\hyperlink{classtutorial_pressed}{tutorial\+Pressed} \\*This component is responsible for displaying the tutorial screen }{\pageref{classtutorial_pressed}}{}
+\item\contentsline{section}{\hyperlink{class_u_i_level_select}{U\+I\+Level\+Select} \\*This component manages the level selection screen It allows the player to select a level and play it if it's unlocked. }{\pageref{class_u_i_level_select}}{}
 \item\contentsline{section}{\hyperlink{class_water_transparency}{Water\+Transparency} \\*This component allows for transparent transition of a Game\+Object if some other collider is nearby. In this case the Player. }{\pageref{class_water_transparency}}{}
-\item\contentsline{section}{\hyperlink{class_water_trigger}{Water\+Trigger} }{\pageref{class_water_trigger}}{}
+\item\contentsline{section}{\hyperlink{class_water_trigger}{Water\+Trigger} \\*This component manages the transparency of the water mesh in the game. }{\pageref{class_water_trigger}}{}
+\item\contentsline{section}{\hyperlink{classwin_now}{win\+Now} }{\pageref{classwin_now}}{}
+\item\contentsline{section}{\hyperlink{class_won_screen}{Won\+Screen} \\*This component is displayed when the player has completed the level. }{\pageref{class_won_screen}}{}
 \end{DoxyCompactList}

@@ -72,6 +72,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
       <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
       <li><a href="hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
+      <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
 </div><!-- top -->
@@ -94,7 +95,7 @@ $(document).ready(function(){initNavTree('class_drop_borders.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -141,13 +142,22 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>liftDuration</b> = 1
 <tr class="memitem:ac010c9e198f3c259aed9eb5c528497bf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac010c9e198f3c259aed9eb5c528497bf"></a>
 SignalPlan&#160;</td><td class="memItemRight" valign="bottom"><b>signalPlan</b></td></tr>
 <tr class="separator:ac010c9e198f3c259aed9eb5c528497bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49d34ce07e3ff3b8ad01654885affc11"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a49d34ce07e3ff3b8ad01654885affc11"></a>
+Vector3&#160;</td><td class="memItemRight" valign="bottom"><b>startPosition</b></td></tr>
+<tr class="separator:a49d34ce07e3ff3b8ad01654885affc11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11d6836a093ba27bc5acc7f40ce107eb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a11d6836a093ba27bc5acc7f40ce107eb"></a>
+Vector3&#160;</td><td class="memItemRight" valign="bottom"><b>midPosition</b></td></tr>
+<tr class="separator:a11d6836a093ba27bc5acc7f40ce107eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3af3fe0fd4deaaa199e05f78914bf316"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3af3fe0fd4deaaa199e05f78914bf316"></a>
+Vector3&#160;</td><td class="memItemRight" valign="bottom"><b>endPosition</b></td></tr>
+<tr class="separator:a3af3fe0fd4deaaa199e05f78914bf316"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This component lowers or raises the borders as one object. This component is dependent on <a class="el" href="class_drop_block.html" title="Component used to ease a levelpart downwards. Controlled in the editor by DropBlockHelper ...">DropBlock</a>'s interaction with the player. </p>
 
-<p>Definition at line <a class="el" href="_drop_borders_8cs_source.html#l00014">14</a> of file <a class="el" href="_drop_borders_8cs_source.html">DropBorders.cs</a>.</p>
+<p>Definition at line <a class="el" href="_drop_borders_8cs_source.html#l00015">15</a> of file <a class="el" href="_drop_borders_8cs_source.html">DropBorders.cs</a>.</p>
 </div><hr/>The documentation for this class was generated from the following file:<ul>
-<li>C:/Projects/Unity/Proeve van Bekwaamheid/Assets/Scripts/LevelScripts/<a class="el" href="_drop_borders_8cs_source.html">DropBorders.cs</a></li>
+<li>Assets/Scripts/LevelScripts/<a class="el" href="_drop_borders_8cs_source.html">DropBorders.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -155,7 +165,7 @@ SignalPlan&#160;</td><td class="memItemRight" valign="bottom"><b>signalPlan</b><
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_drop_borders.html">DropBorders</a></li>
-    <li class="footer">Generated on Wed Jun 4 2014 20:39:55 for Proeve van Bekwaamheid by
+    <li class="footer">Generated on Wed Jun 4 2014 20:44:41 for Proeve van Bekwaamheid by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.7 </li>
   </ul>
