@@ -12,8 +12,6 @@ public class BlockTransparency : MonoBehaviour
     {
         Color col = transform.parent.renderer.material.color;
         float dist = Vector3.Distance(player.transform.position, transform.position);
-        //op de z as checken. als de parent van de transform zijn z kleiner is dan de speler z dan zit de speler erboven.
-
         if (dist <= distanceTillFade && player.transform.position.z >= transform.parent.position.z)
         {
             col.a -= 0.1f;
@@ -21,7 +19,7 @@ public class BlockTransparency : MonoBehaviour
             {
                 col.a = 0.0f;
             }
-            transform.parent.GetComponent<BoxCollider>().isTrigger = true;
+            transform.parent.collider.isTrigger = true;
             transform.parent.renderer.material.color = col;
         }
         else
@@ -31,7 +29,7 @@ public class BlockTransparency : MonoBehaviour
             {
                 col.a = 1.0f;
             }
-            transform.parent.GetComponent<BoxCollider>().isTrigger = false;
+            transform.parent.collider.isTrigger = false;
             transform.parent.renderer.material.color = col;
         }
 

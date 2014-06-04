@@ -1,6 +1,7 @@
 ﻿using UnityEditor;
 [CustomEditor(typeof(DropBorders))]
-public class DropBordersHelper : Editor {
+public class DropBordersHelper : Editor
+{
     public override void OnInspectorGUI()
     {
         DropBorders t = (DropBorders)target;

@@ -18,5 +18,7 @@ var annotated =
     [ "ScaleInGameGUI", "class_scale_in_game_g_u_i.html", "class_scale_in_game_g_u_i" ],
     [ "ScoreCounter", "class_score_counter.html", "class_score_counter" ],
     [ "SpawnPoint", "class_spawn_point.html", "class_spawn_point" ],
-    [ "UILevelSelect", "class_u_i_level_select.html", "class_u_i_level_select" ]
+    [ "UILevelSelect", "class_u_i_level_select.html", "class_u_i_level_select" ],
+    [ "WaterTransparency", "class_water_transparency.html", "class_water_transparency" ],
+    [ "WaterTrigger", "class_water_trigger.html", null ]
 ];

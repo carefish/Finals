@@ -1,6 +1,7 @@
 ﻿using UnityEditor;
 [CustomEditor(typeof(GameConfig))]
-public class GameConfigHelper : Editor {
+public class GameConfigHelper : Editor
+{
     UnityEngine.Vector2 helperScroll;
     string helperText = @"This object provides quick and easy access
 to perform minor tweaks or adjustments.
@@ -13,12 +14,12 @@ to have a Game Object named 'SpawnPoint'.";
     public override void OnInspectorGUI()
     {
         UnityEngine.GUI.enabled = false;
-        helperText      = EditorGUILayout.TextArea(helperText);
+        helperText = EditorGUILayout.TextArea(helperText);
         UnityEngine.GUI.enabled = true;
-        GameConfig t    = (GameConfig)target;
-        t.playerSpeed   = EditorGUILayout.Slider("Player speed: ", t.playerSpeed, 1.0f, 100.0f);
-        t.levelName     = EditorGUILayout.TextField("Starting level: ", t.levelName); 
-		t.pickUpCoinValue = EditorGUILayout.IntField("Coin pickup Value:", 10);
+        GameConfig t = (GameConfig)target;
+        t.playerSpeed = EditorGUILayout.Slider("Player speed: ", t.playerSpeed, 1.0f, 100.0f);
+        t.levelName = EditorGUILayout.TextField("Starting level: ", t.levelName);
+        t.pickUpCoinValue = EditorGUILayout.IntField("Coin pickup Value:", 10);
 
     }
 }

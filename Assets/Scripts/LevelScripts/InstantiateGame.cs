@@ -6,7 +6,11 @@ using System.Reflection;
 /// This component is responsible for loading and instantiating objects needed for the game.
 /// <param name="player">The prefab/GameObject controlled by the player</param>
 /// <param name="level">The switchable level, switchable by setting 'levelName'</param>
-/// <param name="playingFieldVolume">The box collider to aid in 'respawning' the player by setting the proper</param>
+/// <param name="playingFieldVolume">The box collider to aid in 'respawning' the player by setting the proper position [DEPRECATED]</param>
+/// <param name="gameConfig">Configuration for the game for inside Unity's Editor </param>
+/// <param name="uiIngame">User Interface for the game</param>
+/// <param name="playerSpawnPoint">The spawnpoint retreived from the game </param>
+/// <param name="levelName">The level prefab to load per scene </param>
 /// </summary>
 public class InstantiateGame : MonoBehaviour
 {

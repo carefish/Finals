@@ -106,13 +106,13 @@ PlayerSettings:
   iPadHighResLandscapeSplashScreen: {fileID: 0}
   AndroidTargetDevice: 0
   AndroidSplashScreenScale: 0
-  AndroidKeystoreName: 
-  AndroidKeyaliasName: 
+  AndroidKeystoreName: C:/Projects/Unity/pvb/pvb.keystore
+  AndroidKeyaliasName: on the roll
   resolutionDialogBanner: {fileID: 0}
   m_BuildTargetIcons:
   - m_BuildTarget: 
     m_Icons:
-    - m_Icon: {fileID: 0}
+    - m_Icon: {fileID: 2800000, guid: 8715e7d34b84bd64bbf486a381b0181f, type: 3}
       m_Size: 128
   m_BuildTargetBatching:
   - m_BuildTarget: Android

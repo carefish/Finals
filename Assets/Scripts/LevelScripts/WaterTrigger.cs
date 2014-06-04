@@ -1,9 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+/// <summary>
+/// This component manages the transparency of the water mesh in the game.
+/// </summary>
 public class WaterTrigger : MonoBehaviour {
     WaterTransparency t;
-	// Use this for initialization
 	void Start () {
         t = transform.parent.GetComponent<WaterTransparency>();
 	}

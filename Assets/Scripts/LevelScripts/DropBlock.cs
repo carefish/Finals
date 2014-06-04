@@ -15,7 +15,6 @@ public class DropBlock : MonoBehaviour
         signalPlan = transform.parent.GetComponent<DropBorders>().signalPlan;
     }
     
-
     void OnTriggerStay(Collider other)
     {
         if (other.tag == "Player")

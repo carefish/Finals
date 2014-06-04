@@ -1,6 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+/// <summary>
+/// This component allows the game to pause if the players are not playing the game properly
+/// or if they want to take a break. Or if the supervising mentor wants to intervene.
+/// </summary>
 public class PauseConditions : MonoBehaviour
 {
 	// UI Buttons:

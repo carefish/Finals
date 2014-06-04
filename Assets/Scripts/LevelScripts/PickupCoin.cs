@@ -1,6 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+/// <summary>
+/// This component is the pickup/powerup in the game.
+/// It uses the ScoreCounter as data store.
+/// </summary>
 public class PickupCoin : MonoBehaviour {
     void OnTriggerEnter(Collider other)
     {

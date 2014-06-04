@@ -19,6 +19,8 @@ var hierarchy =
       [ "ScaleInGameGUI", "class_scale_in_game_g_u_i.html", null ],
       [ "ScoreCounter", "class_score_counter.html", null ],
       [ "SpawnPoint", "class_spawn_point.html", null ],
-      [ "UILevelSelect", "class_u_i_level_select.html", null ]
+      [ "UILevelSelect", "class_u_i_level_select.html", null ],
+      [ "WaterTransparency", "class_water_transparency.html", null ],
+      [ "WaterTrigger", "class_water_trigger.html", null ]
     ] ]
 ];

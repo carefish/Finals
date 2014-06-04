@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+/// <summary>
+/// This component is displayed when the player has completed the level.
+/// </summary>
 public class WonScreen : MonoBehaviour {
 	// Gameobjects needed for won screen:
 	private GameObject wonBG;
