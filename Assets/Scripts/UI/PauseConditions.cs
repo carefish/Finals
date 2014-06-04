@@ -19,10 +19,15 @@ public class PauseConditions : MonoBehaviour
 
     void Start()
     {
-
+#if UNITY_EDITOR || UNITY_STANDALONE || UNITY_WEBPLAYER
+        GameObject.Find("Pause_Screen").SetActive(false);
+#endif
     }
     void Update()
     {
+
+#if UNITY_ANDROID
+
 		// Changes color of buttons:
 		inputPos(button1);
 		inputPos(button2); 
@@ -30,8 +35,7 @@ public class PauseConditions : MonoBehaviour
 		inputPos(button4);
 		//----------------
 		pressLevelSelect(GameObject.Find("btn_lvlSelect"));
-			
-#if UNITY_ANDROID
+
 		// Pause game if less or more than 4 fingers (2 players)
 		if (inputPos(button1) && inputPos(button2) &&
            inputPos(button3) && inputPos(button4))

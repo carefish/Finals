@@ -40,10 +40,14 @@ public class InstantiateGame : MonoBehaviour
         {
 			//uiIngame = Instantiate(Resources.Load<GameObject>("UI")) as GameObject;
 			// check if instantiate is possible otherwise throw exception
-			if((uiIngame = Instantiate(Resources.Load<GameObject>("UI")) as GameObject) == null)	{
-				throw new System.Exception("Failed to initialize User Interface!");
-			}
-			assignButtons();
+#if UNITY_ANDROID
+            if ((uiIngame = Instantiate(Resources.Load<GameObject>("UI")) as GameObject) == null)
+            {
+                throw new System.Exception("Failed to initialize User Interface!");
+            }
+            assignButtons();
+#endif
+			
             if (Resources.Load<GameObject>("Levels/" + levelName) == null)
             {
                 throw new System.Exception("No valid level name! Please be sure to type a valid one!");
@@ -54,14 +58,16 @@ public class InstantiateGame : MonoBehaviour
             {
                 throw new System.Exception("No SpawnPoint in level! Please be sure to add a Game Object named \'SpawnPoint\'!");
             }
+
             playerSpawnPoint = level.GetComponent<SpawnPoint>().spawnPoint;
-         
+           
 
         }
         catch (System.Exception e)
         {
             Debug.LogException(e, this);
         }
+
         player = Instantiate(Resources.Load<GameObject>("Player/obj_Player"), playerSpawnPoint.position, Quaternion.identity) as GameObject;
 
         GetComponent<FollowPlayer>().playerObject = player;

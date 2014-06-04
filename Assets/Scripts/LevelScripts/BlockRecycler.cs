@@ -8,9 +8,10 @@ public class BlockRecycler : MonoBehaviour
 {
     Vector3 startPosition;
     Vector3 recyclePosition;
-
+    DropBorders dropBorders;
     void Start()
     {
+        dropBorders = transform.parent.GetComponent<DropBorders>();
         startPosition = transform.position;
         recyclePosition = startPosition;
         recyclePosition.z += 1000.0f;
@@ -19,13 +20,17 @@ public class BlockRecycler : MonoBehaviour
     void Update()
     {
         Vector3 currentPosition = transform.position;
-        if (startPosition.z != currentPosition.z)
+        if (dropBorders.signalPlan == SignalPlan.GREEN)
+        {
+            transform.position = startPosition;
+        }
+        else if (dropBorders.signalPlan == SignalPlan.ORANGE)
         {
             transform.position = recyclePosition;
         }
-        else
+        else if (dropBorders.signalPlan == SignalPlan.RED)
         {
-            transform.position = startPosition;
+            transform.position = recyclePosition;
         }
     }
 }

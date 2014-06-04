@@ -16,33 +16,48 @@ public class DropBorders : MonoBehaviour
     public float liftDuration = 1.61803f;
     public SignalPlan signalPlan;
     float counter = 0f;
+    float redCounter = 0f;
     float startTime;
     float startZ;
     float endZ;
-    Vector3 startPosition;
+    public Vector3 startPosition;
+    public Vector3 midPosition;
+    public Vector3 endPosition;
     void Start()
     {
         startPosition = transform.position;
+        midPosition = startPosition;
+        midPosition.z += 0.5f;
+        endPosition = startPosition;
+        endPosition.z += 1.01f;
         Debug.Log("start: " + startPosition.z);
     }
+
     void Update()
     {
-        counter += Time.deltaTime;
-        if (counter > liftDuration && transform.position.z > startPosition.z)
-        {
-            //Debug.Log("border: " + transform.position.z + " | " + counter);
-            transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z - 0.005f);
-            counter = 0f;
-        }
         if (transform.position.z <= startPosition.z)
         {
             signalPlan = SignalPlan.GREEN;
-        } else if (transform.position.z <= startPosition.z + .5f)
+        }
+        else if (transform.position.z <= startPosition.z + .5f)
         {
             signalPlan = SignalPlan.ORANGE;
-        } else if (transform.position.z <= startPosition.z + 1f)
+        }
+        else if (transform.position.z <= startPosition.z + 1f)
         {
             signalPlan = SignalPlan.RED;
+        }
+        counter += Time.deltaTime;
+        if (counter > liftDuration && transform.position.z > startPosition.z)
+        {
+            Debug.Log("pos: " + transform.position.z + " endpos: " + endPosition.z);
+            transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z - 0.08f);
+            counter = 0f;
+        }
+        else if (counter > liftDuration && transform.position.z > startPosition.z && signalPlan == SignalPlan.RED)
+        {
+            transform.position = endPosition;
+            counter = 0f;
         }
     }
 

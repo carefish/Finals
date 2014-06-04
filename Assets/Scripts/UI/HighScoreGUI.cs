@@ -11,6 +11,7 @@ public class HighScoreGUI : MonoBehaviour
     float highScoreX;
     void Start()
     {
+        Debug.Log(GetComponent<FollowPlayer>().playerObject + "1234");
         playerReference = GetComponent<FollowPlayer>().playerObject;
         //Debug.Log("!!!" + playerReference);
         highScore1 = Instantiate(Resources.Load("LevelParts/ui_HighScore")) as GameObject;

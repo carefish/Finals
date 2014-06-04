@@ -7,43 +7,15 @@ using System.Collections;
 public class BlockTransparency : MonoBehaviour
 {
     public GameObject player;
-    bool change = true;
-
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.tag == "Player")
-        {
-            change = false; 
-        }
-    }
-    void OnTriggerStay(Collider other)
-    {
-        if (other.tag == "Player")
-        {
-            Color col = transform.parent.renderer.material.color;
-            col.a += 0.1f;
-            if (col.a >= 1.0f)
-            {
-                col.a = 1.0f;
-            }
-            transform.parent.renderer.material.color = col;
-        }
-    }
-    void OnTriggerExit(Collider other)
-    {
-        if (other.tag == "Player")
-        {
-            change = true; 
-        }
-    }
-
+    public float distanceTillFade = 2.5f;
     void Update()
     {
         Color col = transform.parent.renderer.material.color;
         float dist = Vector3.Distance(player.transform.position, transform.position);
-        if (dist <= 3.5f && change)
+        //op de z as checken. als de parent van de transform zijn z kleiner is dan de speler z dan zit de speler erboven.
+
+        if (dist <= distanceTillFade && player.transform.position.z >= transform.parent.position.z)
         {
-            //Debug.Log("1");
             col.a -= 0.1f;
             if (col.a <= 0.0f)
             {
