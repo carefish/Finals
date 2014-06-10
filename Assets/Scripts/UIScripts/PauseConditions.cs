@@ -19,9 +19,14 @@ public class PauseConditions : MonoBehaviour
 	private GameObject pauseTxt2;
 	private GameObject pScreen;
 	float highScoreX;
-	
+
+	// Testing byte system:
+	byte testByteButtonState;
+	byte fulltest = 255;
 	void Update()
 	{
+		Debug.Log("byte = " + (testByteButtonState & ( 1 << 7-1)).ToString());
+		Debug.Log(((fulltest & 0x99)).ToString());
 		// Changes color of buttons:
 		//inputPos(button1);
 		//inputPos(button2); 
@@ -69,6 +74,7 @@ public class PauseConditions : MonoBehaviour
 				Application.LoadLevel(0);
 			}
 		}
+		
 	}
 	/// <summary>
 	/// Checks if Touch Input touches given Gameobject
@@ -88,7 +94,7 @@ public class PauseConditions : MonoBehaviour
 					buttonState = "_down";
 					GameObject.Find("UI(Clone)").GetComponent<buttonColor>().changeColor(checkPos);
 					return true;
-					
+
 				}
 				
 			}

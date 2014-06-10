@@ -11,9 +11,6 @@ public class buttonColor : MonoBehaviour
 	public Texture[] testTextureArray =  Resources.LoadAll<Texture>("Textures/UI/final_ui_colors");
     public string gameState = "_red";
 	public void Start()	{
-		for (int i = 0; i < testTextureArray.Length; i++) {
-			Debug.Log(testTextureArray[i].name.ToString());
-		}
 
 		//testTextureArray = Resources.LoadAll("Textures/UI/final_ui_colors") as Texture[];
 	}
@@ -21,21 +18,18 @@ public class buttonColor : MonoBehaviour
     /// Changes the color of UI
     /// </summary>
     /// <param name="gameobj">Gameobj.</param>
-    public void changeColor(GUITexture gameObjTexture)
-    {
-		gameObjTexture.texture = getTexture("btn_" + gameObjTexture.gameObject.name + GameObject.Find("Camera").GetComponent<PauseConditions>().buttonState +
-                                                    "_" + GameObject.Find("Borders").GetComponent<DropBorders>().signalPlan.ToString());
+    public void changeColor(GUITexture gameObjTexture)	{
+		gameObjTexture.texture = getTexture("btn_" + gameObjTexture.gameObject.name + GameObject.Find("Camera").GetComponent<PauseConditions>().buttonState + "_" + GameObject.Find("Borders").GetComponent<DropBorders>().signalPlan.ToString());
 		//gameObjTexture.texture = Resources.Load("Textures/UI/final_ui_colors/btn_" + gameObjTexture.gameObject.name + GameObject.Find("Camera").GetComponent<PauseConditions>().buttonState +
                                                    // "_" + GameObject.Find("Borders").GetComponent<DropBorders>().signalPlan.ToString()) as Texture;
     }
 	private Texture getTexture(string nameOfTexture)	{
-		int i = 0;
-
-		while(testTextureArray[i].name.Equals(nameOfTexture)){
-			i++;
+		for (int i = 0; i < testTextureArray.Length; i++) {
+			if(testTextureArray[i].name.Equals(nameOfTexture))	{
+				return testTextureArray[i];
+			}
 		}
+		return testTextureArray[0];
 
-		
-		return testTextureArray[i];
 	}
 }
