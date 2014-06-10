@@ -53,6 +53,7 @@ public class MenuScript : MonoBehaviour
 		screen_Menu 		= GameObject.Find("Menu_start_bg").GetComponent<GUITexture>();
 		lvlSelectEmpty 		= GameObject.Find("level_empty").GetComponent<GUITexture>();
         //---------------- End of Setup ----------------\\
+		// Set Scaling of pixels correctly:
         screen_Menu.pixelInset 			= new Rect(0, 0, Screen.width, Screen.height);
 
 		button_Credits.pixelInset 		= new Rect(100 * saveScaleFactorX, 1100 * saveScaleFactorY, 272 * saveScaleFactorX, 272 * saveScaleFactorX);
@@ -64,7 +65,7 @@ public class MenuScript : MonoBehaviour
 		button_lvlUnlocked.pixelInset 	= new Rect(272 * saveScaleFactorX, -2000 * saveScaleFactorY, 272 * saveScaleFactorX, 206 * saveScaleFactorX);
 
 		lvlSelectEmpty.pixelInset 		= new Rect(272 * saveScaleFactorX, -2600 * saveScaleFactorY, 272 * saveScaleFactorX, 206 * saveScaleFactorX);
-
+		//-----------------------------
     }
 
 
@@ -175,8 +176,12 @@ public class MenuScript : MonoBehaviour
     {
 		return (float)Screen.height / calcSizesHeight;
 	}
-	
-	bool HitTest(GUITexture guiTexture)
+	/// <summary>
+	/// Checks if button is pressed
+	/// </summary>
+	/// <returns><c>true</c>, if button was hit, <c>false</c> otherwise returns false.</returns>
+	/// <param name="guiTexture">GUI texture of button</param>
+	private bool HitTest(GUITexture guiTexture)
 	{
 		return (guiTexture.HitTest(Input.mousePosition) && Input.GetMouseButtonDown(0));
 	}

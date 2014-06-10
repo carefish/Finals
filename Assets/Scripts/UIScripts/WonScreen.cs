@@ -44,7 +44,7 @@ public class WonScreen : MonoBehaviour {
 			// Set gameobjects off
 			guiWon.SetActive(false);
 			darkOverlay.enabled = false;
-			wonBG.enabled = fals
+			wonBG.enabled = false;
 			button_LvlSelect.enabled = false;
 			levelWon = false;
 		}
@@ -54,15 +54,16 @@ public class WonScreen : MonoBehaviour {
 	void Update () {
 		// Check if players won and boolean is set to true:
 		if(levelWon)	{
-			// Set gameobjects on
+			// Set gameobjects on true if player beats level:
 			guiWon.SetActive(true);
 			darkOverlay.enabled = true;
 			wonBG.enabled = true;
-			//wonBG.SetActive(true);
 			button_LvlSelect.enabled = true;
-			if(button_LvlSelect.GetComponent<GUITexture>().HitTest(Input.mousePosition) && Input.GetMouseButtonDown(0))	{
+			//--------------------------------
+			if(button_LvlSelect.HitTest(Input.mousePosition) && Input.GetMouseButtonDown(0))	{
 				Application.LoadLevel(0);
 			}
+			// If player presses return button on Android or escape on PC
 			if (Input.GetKeyDown(KeyCode.Escape))	{
 				Application.LoadLevel(0);
 			}

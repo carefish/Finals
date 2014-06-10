@@ -20,10 +20,10 @@ public class InstantiateGame : MonoBehaviour
     GameObject level;
     GameObject playingFieldVolume;
 	GameObject uiIngame;
-	GameObject button1;
-	GameObject button2;
-	GameObject button3;
-	GameObject button4;
+	GUITexture button1;
+	GUITexture button2;
+	GUITexture button3;
+	GUITexture button4;
     Transform playerSpawnPoint;
     string levelName = "";
 
@@ -98,10 +98,10 @@ public class InstantiateGame : MonoBehaviour
 		// CODING EXAMPLE, DIFFERENT WAY TO DO THIS:
 		//button1 = GameObject.Find("Button1");
 		//GetComponent<PauseConditions>().button1 = button1;
-		GetComponent<PauseConditions>().button1 = uiIngame.transform.FindChild("UI_p1").gameObject.transform.FindChild("Button1").gameObject;
-		GetComponent<PauseConditions>().button2 = uiIngame.transform.FindChild("UI_p1").gameObject.transform.FindChild("Button2").gameObject;
-		GetComponent<PauseConditions>().button3 = uiIngame.transform.FindChild("UI_p2").gameObject.transform.FindChild("Button3").gameObject;
-		GetComponent<PauseConditions>().button4 = uiIngame.transform.FindChild("UI_p2").gameObject.transform.FindChild("Button4").gameObject;
+		GetComponent<PauseConditions>().button1 = uiIngame.transform.FindChild("UI_p1").gameObject.transform.FindChild("Button1").gameObject.GetComponent<GUITexture>();
+		GetComponent<PauseConditions>().button2 = uiIngame.transform.FindChild("UI_p1").gameObject.transform.FindChild("Button2").gameObject.GetComponent<GUITexture>();
+		GetComponent<PauseConditions>().button3 = uiIngame.transform.FindChild("UI_p2").gameObject.transform.FindChild("Button3").gameObject.GetComponent<GUITexture>();
+		GetComponent<PauseConditions>().button4 = uiIngame.transform.FindChild("UI_p2").gameObject.transform.FindChild("Button4").gameObject.GetComponent<GUITexture>();
 	}
 
 }
