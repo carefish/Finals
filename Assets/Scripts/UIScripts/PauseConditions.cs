@@ -18,20 +18,9 @@ public class PauseConditions : MonoBehaviour
 	private GameObject pauseTxt1;
 	private GameObject pauseTxt2;
 	private GameObject pScreen;
-	float highScoreX;
-
-	// Testing byte system:
-	byte testByteButtonState;
-	byte fulltest = 255;
+	private float highScoreX;
 	void Update()
 	{
-		Debug.Log("byte = " + (testByteButtonState & ( 1 << 7-1)).ToString());
-		Debug.Log(((fulltest & 0x99)).ToString());
-		// Changes color of buttons:
-		//inputPos(button1);
-		//inputPos(button2); 
-		//inputPos(button3); 
-		//inputPos(button4);
 		//----------------
 		#if UNITY_EDITOR || UNITY_STANDALONE || UNITY_WEBPLAYER
 			pressLevelSelect(GameObject.Find("btn_lvlSelect"));

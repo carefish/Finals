@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 /// <summary>
+/// !--DEPRECATED CLASS--!
 /// This component manages the level selection screen
 /// It allows the player to select a level and play it if it's unlocked.
 /// </summary>
