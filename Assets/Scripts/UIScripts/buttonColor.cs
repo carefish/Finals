@@ -8,11 +8,10 @@ using System.Collections.Generic;
 public class buttonColor : MonoBehaviour
 {
 	// Testing texture array for faster acces times:
-	public Texture[] testTextureArray =  Resources.LoadAll<Texture>("Textures/UI/final_ui_colors");
+	public Texture[] testTextureArray;
     public string gameState = "_red";
 	public void Start()	{
-
-		//testTextureArray = Resources.LoadAll("Textures/UI/final_ui_colors") as Texture[];
+        testTextureArray = Resources.LoadAll("Textures/UI/final_ui_colors") as Texture[];
 	}
     /// <summary>
     /// Changes the color of UI
