@@ -19,8 +19,6 @@ public class ScaleInGameGUI : MonoBehaviour
         mCoins = GameObject.FindGameObjectsWithTag("Pickup_Coin").Length;
         foreach (GameObject s in GameObject.FindGameObjectsWithTag("UI_Elements_Buttons_Score"))
         {
-
-
             float pixelInsetX = s.GetComponent<GUITexture>().pixelInset.x;
             float pixelInsetY = s.GetComponent<GUITexture>().pixelInset.y;
             float pixelInsetW = s.GetComponent<GUITexture>().pixelInset.width;

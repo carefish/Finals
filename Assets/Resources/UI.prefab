@@ -694,6 +694,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 643400a5348e6eb4e9bb91994ecaa652, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  testTextureArray:
+  - {fileID: 2800000, guid: 776c4f968a712314195240662f9eef46, type: 3}
+  - {fileID: 2800000, guid: a85d0bbe40c5cd1489e1715d4eedb4a4, type: 3}
+  - {fileID: 2800000, guid: 47bdbcb6a52f2554f9f2220eb45a0e1c, type: 3}
+  - {fileID: 2800000, guid: b6ccfef1dc40564469639358294064e5, type: 3}
+  - {fileID: 2800000, guid: 99c68458221d26346a37f8a72e4e1319, type: 3}
+  - {fileID: 2800000, guid: 40eeb007f3b137742a224262dc611422, type: 3}
+  - {fileID: 2800000, guid: c0931349001f38a4593d14b1b503d5d7, type: 3}
+  - {fileID: 2800000, guid: fec340cbaa7626647893b72de7103e39, type: 3}
+  - {fileID: 2800000, guid: 79e2210e6a649454586d0a80cb867c99, type: 3}
+  - {fileID: 2800000, guid: 61b5e3f26f045564b9414b0d013f4f4f, type: 3}
+  - {fileID: 2800000, guid: c1e4bcef11a030a419abb3305a475f58, type: 3}
+  - {fileID: 2800000, guid: 7168e13a85059de4396ad464a8766184, type: 3}
+  - {fileID: 2800000, guid: 1092a3dadc722474084d2fe2c92d451b, type: 3}
+  - {fileID: 2800000, guid: dcbb98bbcd002d64e8245854adddec07, type: 3}
+  - {fileID: 2800000, guid: 7b01efdd70a3d784ebb0f74c0d29c431, type: 3}
+  - {fileID: 2800000, guid: 43428cd6fe4fb3b42845f7b01b8e94a0, type: 3}
+  - {fileID: 2800000, guid: ed54f7785d3eb154e9a649f677afd04c, type: 3}
+  - {fileID: 2800000, guid: e9127517a5f948341a5a0df5419bc8eb, type: 3}
+  - {fileID: 2800000, guid: c2526d5d7c7093243a5c247c169b36e5, type: 3}
+  - {fileID: 2800000, guid: 6c0f82e71886ea34b86d2c926a82b70a, type: 3}
+  - {fileID: 2800000, guid: b4c535b1316c2ed4c88e1f2be934eaef, type: 3}
+  - {fileID: 2800000, guid: f6d0fe3e2697c904db2b44fbe625b450, type: 3}
+  - {fileID: 2800000, guid: 6996d5d278e12bf47b282c77c8da20de, type: 3}
+  - {fileID: 2800000, guid: b6989f1e86bb2f345ac7ef8b3c93cd10, type: 3}
+  - {fileID: 2800000, guid: 54d20354285994f41b05a39b3d1766e2, type: 3}
+  - {fileID: 2800000, guid: 8485a92177d8900479e12e6ce5ebb8d9, type: 3}
+  - {fileID: 2800000, guid: 87c57ebc239b33b46b965fe5a463f278, type: 3}
   gameState: _red
 --- !u!114 &11400004
 MonoBehaviour:
@@ -1085,8 +1113,8 @@ GUITexture:
   m_Color: {r: .5, g: .5, b: .5, a: .5}
   m_PixelInset:
     serializedVersion: 2
-    x: -64
-    y: -64
+    x: 0
+    y: 0
     width: 128
     height: 128
   m_LeftBorder: 0
