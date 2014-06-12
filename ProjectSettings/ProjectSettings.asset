@@ -11,7 +11,7 @@ PlayerSettings:
   targetResolution: 0
   accelerometerFrequency: 60
   companyName: MediaCollege
-  productName: 'Proeve van Bekwaamheid '
+  productName: On The Roll
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   defaultScreenWidth: 1024
@@ -73,11 +73,11 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 1
-  iPhoneBundleIdentifier: eu.is1337.proeve
+  iPhoneBundleIdentifier: eu.is1337.proeve.ontheroll
   metroEnableIndependentInputSource: 0
   metroEnableLowLatencyPresentationAPI: 0
   productGUID: a9aa52b307cf6aa4282f22d1aada9361
-  iPhoneBundleVersion: 1.1
+  iPhoneBundleVersion: 1.2
   AndroidBundleVersionCode: 1
   AndroidMinSdkVersion: 14
   AndroidPreferredInstallLocation: 1
@@ -106,8 +106,8 @@ PlayerSettings:
   iPadHighResLandscapeSplashScreen: {fileID: 0}
   AndroidTargetDevice: 0
   AndroidSplashScreenScale: 0
-  AndroidKeystoreName: 
-  AndroidKeyaliasName: 
+  AndroidKeystoreName: C:/Projects/Unity/Proeve van Bekwaamheid - tussenproducten/user.keystore
+  AndroidKeyaliasName: on the roll
   resolutionDialogBanner: {fileID: 0}
   m_BuildTargetIcons:
   - m_BuildTarget: 
