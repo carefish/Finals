@@ -9,7 +9,9 @@ public class PickupCoin : MonoBehaviour {
     {
         if (other.tag == "Player")
         {
+			#if UNITY_ANDROID
             other.gameObject.GetComponent<ScoreCounter>().totalPoints += 10;
+			#endif
         }
     }
 
@@ -18,7 +20,9 @@ public class PickupCoin : MonoBehaviour {
         if (other.tag == "Player")
         {
             Destroy(gameObject);
-			GameObject.Find("UI(Clone)").GetComponent<ScaleInGameGUI>().cCoins++;
+			#if UNITY_ANDROID
+				GameObject.Find("UI(Clone)").GetComponent<ScaleInGameGUI>().cCoins++;
+			#endif
         }
     }
 }
